@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Pushing workspace.xml because it had remained uncommitted">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Adding parent relative path to child poms to make the GitHub build successful." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +177,7 @@
       <workItem from="1657801902245" duration="8310000" />
       <workItem from="1658232722556" duration="3146000" />
       <workItem from="1658238222863" duration="83000" />
-      <workItem from="1658238361029" duration="4243000" />
+      <workItem from="1658238361029" duration="4568000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -230,7 +228,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658241462681</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Adding parent relative path to child poms to make the GitHub build successfull.">
+      <created>1658243606720</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658243606720</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adding parent relative path to child poms to make the GitHub build successful.">
+      <created>1658243619682</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658243619682</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +271,8 @@
     <MESSAGE value="Modules sanitized by sonar lint 2 serious issues found" />
     <MESSAGE value="Pushing workspace.xml because it had remained uncommited" />
     <MESSAGE value="Pushing workspace.xml because it had remained uncommitted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pushing workspace.xml because it had remained uncommitted" />
+    <MESSAGE value="Adding parent relative path to child poms to make the GitHub build successfull." />
+    <MESSAGE value="Adding parent relative path to child poms to make the GitHub build successful." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding parent relative path to child poms to make the GitHub build successful." />
   </component>
 </project>
