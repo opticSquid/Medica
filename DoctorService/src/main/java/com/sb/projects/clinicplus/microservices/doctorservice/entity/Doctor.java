@@ -1,8 +1,7 @@
 package com.sb.projects.clinicplus.microservices.doctorservice.entity;
 
 import com.sun.istack.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,9 +11,13 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
-public class Doctors {
+public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @NotNull
@@ -26,23 +29,12 @@ public class Doctors {
     private String degree;
     @NotBlank
     private String specialization;
-
+    // TODO: Need to check if by removing the given functions if lombok functions can still do the work
     public int getD_id() {
         return d_id;
     }
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Doctors{" +
-                "d_id=" + d_id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", degree='" + degree + '\'' +
-                ", specialization='" + specialization + '\'' +
-                '}';
     }
 }

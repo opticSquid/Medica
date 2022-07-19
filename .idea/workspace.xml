@@ -4,14 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="All doctor service created and patient service is starting to be created" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="All doctor service created and patient service is starting to be created">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/controller/Patient_controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/entity/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/Patient_repo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/service/Patient_service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientService/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PatientService/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/Doctor_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/Doctor_controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/entity/Doctors.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/entity/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/Doctor_repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/Doctor_repo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/Doctor_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/Doctor_service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/DoctorService" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -40,44 +70,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "c171a36f315f44e4ab9a5c472d9d1d70"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/CTS/Autum/my projects/ClinicPlus/PatientService/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b09bfb8835c055e5ccb635681d112357&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\CTS\Autum\my projects\ClinicPlus\PatientService\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sb.projects.clinicplus.microservices.patientservice.controller" />
+      <recent name="com.sb.projects.clinicplus.microservices.patientservice.repo" />
+      <recent name="com.sb.projects.clinicplus.microservices.patientservice.entity" />
       <recent name="com.sb.projects.clinicplus.microservices.doctorservice.service" />
       <recent name="com.sb.projects.clinicplus.microservices.doctorservice" />
-      <recent name="com.sb.projects.clinicplus.microservices.doctorservice.repository" />
-      <recent name="com.sb.projects.clinicplus.microservices.doctorservice.entity" />
-      <recent name="com.sb.projects.clinicplus.microservices.doctorservice.controller" />
     </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
         <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
       </set>
     </option>
   </component>
@@ -105,6 +148,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.pgadmin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="pgadmin" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -120,6 +176,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.pgadmin: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -134,7 +191,10 @@
       <updated>1657764994890</updated>
       <workItem from="1657764998221" duration="4226000" />
       <workItem from="1657774945523" duration="3718000" />
-      <workItem from="1657778812522" duration="2040000" />
+      <workItem from="1657778812522" duration="2729000" />
+      <workItem from="1657781671166" duration="670000" />
+      <workItem from="1657801902245" duration="8310000" />
+      <workItem from="1658232722556" duration="1528000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -169,6 +229,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/DoctorService" />
+      <path value="$PROJECT_DIR$/PatientService" />
+    </ignored-roots>
     <MESSAGE value="Parent Project created for Clinic Plus" />
     <MESSAGE value="All doctor service created and patient service is starting to be created" />
     <option name="LAST_COMMIT_MESSAGE" value="All doctor service created and patient service is starting to be created" />

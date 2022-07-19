@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>DoctorService</module>
+        <module>PatientService</module>
     </modules>
 
     <name>ClinicPlus</name>
