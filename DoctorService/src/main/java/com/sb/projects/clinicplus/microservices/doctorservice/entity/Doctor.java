@@ -1,6 +1,5 @@
 package com.sb.projects.clinicplus.microservices.doctorservice.entity;
 
-import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -20,8 +19,8 @@ import javax.validation.constraints.Size;
 public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
-    private int d_id;
+    @NonNull
+    private Integer dId;
     @Size(min = 6, message = "Name should be at least 6 characters long")
     private String name;
     private String email;
@@ -29,9 +28,10 @@ public class Doctor {
     private String degree;
     @NotBlank
     private String specialization;
+
     // TODO: Need to check if by removing the given functions if lombok functions can still do the work
-    public int getD_id() {
-        return d_id;
+    public int getdId() {
+        return dId;
     }
 
     public String getName() {

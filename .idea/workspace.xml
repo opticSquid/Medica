@@ -4,26 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="All doctor service created and patient service is starting to be created">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/controller/Patient_controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/entity/Patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/Patient_repo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/service/Patient_service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientService/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PatientService/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Patient Service created and Standardized with doctor service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/Doctor_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/Doctor_controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/entity/Doctors.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/entity/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/Doctor_repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/Doctor_repo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/Doctor_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/Doctor_service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/Doctor_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/entity/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/entity/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/Doctor_repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/DoctorRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/Doctor_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/controller/Patient_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/entity/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/entity/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/Patient_repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/PatientRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/service/Patient_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/src/test/java/com/sb/projects/clinicplus/microservices/patientservice/PatientServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/test/java/com/sb/projects/clinicplus/microservices/patientservice/PatientDTOServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +73,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/CTS/Autum/my projects/ClinicPlus/PatientService/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/souma/Downloads/sonarlint-intellij-6.8.0.50884.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,7 +82,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b09bfb8835c055e5ccb635681d112357&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -194,7 +185,9 @@
       <workItem from="1657778812522" duration="2729000" />
       <workItem from="1657781671166" duration="670000" />
       <workItem from="1657801902245" duration="8310000" />
-      <workItem from="1658232722556" duration="1528000" />
+      <workItem from="1658232722556" duration="3146000" />
+      <workItem from="1658238222863" duration="83000" />
+      <workItem from="1658238361029" duration="1737000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -210,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657780807285</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Patient Service created and Standardized with doctor service">
+      <created>1658235078157</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658235078157</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +235,7 @@
     </ignored-roots>
     <MESSAGE value="Parent Project created for Clinic Plus" />
     <MESSAGE value="All doctor service created and patient service is starting to be created" />
-    <option name="LAST_COMMIT_MESSAGE" value="All doctor service created and patient service is starting to be created" />
+    <MESSAGE value="Patient Service created and Standardized with doctor service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patient Service created and Standardized with doctor service" />
   </component>
 </project>

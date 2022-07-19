@@ -1,6 +1,5 @@
 package com.sb.projects.clinicplus.microservices.patientservice.entity;
 
-import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -18,15 +17,17 @@ import javax.persistence.Id;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
-    private int p_id;
+    @NonNull
+    private Integer pId;
     private String name;
     private String email;
-    private String contact_no;
+    private String contactNo;
+
     // TODO: Need to check if by removing the given functions if lombok functions can still do the work
-    public int getP_id() {
-        return p_id;
+    public int getpId() {
+        return pId;
     }
+
     public String getName() {
         return name;
     }

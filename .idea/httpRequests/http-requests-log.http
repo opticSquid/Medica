@@ -1,0 +1,14 @@
+POST http://localhost:8080/api/doctors/new
+Content-Type: application/json
+
+{
+  "name": "sb",
+  "email": "s@b.com",
+  "degree": "b.tech",
+  "specialization": "heart"
+}
+
+<> 2022-07-14T193908.500.json
+
+###
+

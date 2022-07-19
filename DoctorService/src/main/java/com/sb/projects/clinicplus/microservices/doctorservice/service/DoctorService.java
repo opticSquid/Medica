@@ -1,7 +1,7 @@
 package com.sb.projects.clinicplus.microservices.doctorservice.service;
 
 import com.sb.projects.clinicplus.microservices.doctorservice.entity.Doctor;
-import com.sb.projects.clinicplus.microservices.doctorservice.repository.Doctor_repo;
+import com.sb.projects.clinicplus.microservices.doctorservice.repository.DoctorRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -10,36 +10,36 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-public class Doctor_service {
-    private final Doctor_repo doctor_repo;
+public class DoctorService {
+    private final DoctorRepo doctorRepo;
 
-    public Doctor_service(Doctor_repo doctor_repo) {
-        this.doctor_repo = doctor_repo;
+    public DoctorService(DoctorRepo doctorRepo) {
+        this.doctorRepo = doctorRepo;
     }
 
     public Iterable<Doctor> getAllDoctors() {
-        return doctor_repo.findAll();
+        return doctorRepo.findAll();
     }
 
     public Doctor getDoctorByID(Integer id) {
-        Optional<Doctor> doctor_optional = doctor_repo.findById(id);
-        return doctor_optional.orElse(null);
+        Optional<Doctor> doctorOptional = doctorRepo.findById(id);
+        return doctorOptional.orElse(null);
     }
 
     public List<Doctor> getDoctorsByName(String name) {
-        Optional<List<Doctor>> doctor_optional = doctor_repo.findByName(name);
-        return doctor_optional.orElse(null);
+        Optional<List<Doctor>> doctorOptional = doctorRepo.findByName(name);
+        return doctorOptional.orElse(null);
     }
 
     public List<Doctor> getDoctorsBySpecialization(String specialization) {
-        Optional<List<Doctor>> doctor_optional = doctor_repo.findBySpecialization(specialization);
-        return doctor_optional.orElse(null);
+        Optional<List<Doctor>> doctorOptional = doctorRepo.findBySpecialization(specialization);
+        return doctorOptional.orElse(null);
     }
 
     public Doctor addNewDoctor(Doctor doctor) {
         log.info("Incoming doctor (to be added): " + doctor);
         try {
-            doctor_repo.save(doctor);
+            doctorRepo.save(doctor);
             return doctor;
         } catch (Exception e) {
             log.error("new doctor could not be added.. reason =>\n" + e);
@@ -52,9 +52,9 @@ public class Doctor_service {
     //TODO: Another update updating the whole record
     public Doctor updateDoctor(Integer id, Doctor doctor) {
         log.info("Incoming doctor (to be updated): " + doctor);
-        Doctor existing_doctor = getDoctorByID(id);
-        if (existing_doctor != null) {
-            return doctor_repo.save(doctor);
+        Doctor existingDoctor = getDoctorByID(id);
+        if (existingDoctor != null) {
+            return doctorRepo.save(doctor);
         } else {
             log.error("Patient could not be updated, because requested patient could not be found");
             return null;
@@ -64,7 +64,7 @@ public class Doctor_service {
     public Boolean deleteDoctor(Integer id) {
         log.info("Incoming doctor id (to be deleted): " + id);
         try {
-            doctor_repo.deleteById(id);
+            doctorRepo.deleteById(id);
             return true;
         } catch (Exception e) {
             log.error("Doctor could not be deleted.. reason => " + e);
