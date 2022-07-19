@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Adding parent relative path to child poms to make the GitHub build successful." />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Merge branch 'main' of github.com:opticSquid/Clinic-Plus" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,6 +93,12 @@
       <recent name="com.sb.projects.clinicplus.microservices.doctorservice" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -177,7 +183,7 @@
       <workItem from="1657801902245" duration="8310000" />
       <workItem from="1658232722556" duration="3146000" />
       <workItem from="1658238222863" duration="83000" />
-      <workItem from="1658238361029" duration="4568000" />
+      <workItem from="1658238361029" duration="4938000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -242,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658243619682</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge branch 'main' of github.com:opticSquid/Clinic-Plus">
+      <created>1658243691857</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658243691857</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +286,7 @@
     <MESSAGE value="Pushing workspace.xml because it had remained uncommitted" />
     <MESSAGE value="Adding parent relative path to child poms to make the GitHub build successfull." />
     <MESSAGE value="Adding parent relative path to child poms to make the GitHub build successful." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding parent relative path to child poms to make the GitHub build successful." />
+    <MESSAGE value="Merge branch 'main' of github.com:opticSquid/Clinic-Plus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of github.com:opticSquid/Clinic-Plus" />
   </component>
 </project>
