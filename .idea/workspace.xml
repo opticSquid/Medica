@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="troubleshooting maven spring boot plugin" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="troubleshooting poms - 2">
+      <change beforePath="$PROJECT_DIR$/DoctorService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +187,7 @@
       <workItem from="1657801902245" duration="8310000" />
       <workItem from="1658232722556" duration="3146000" />
       <workItem from="1658238222863" duration="83000" />
-      <workItem from="1658238361029" duration="6960000" />
+      <workItem from="1658238361029" duration="7396000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -290,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658246433087</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="troubleshooting poms - 2">
+      <created>1658246736952</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658246736952</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +336,7 @@
     <MESSAGE value="moving all common dependencies to parent" />
     <MESSAGE value="workspace file committed" />
     <MESSAGE value="troubleshooting maven spring boot plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="troubleshooting maven spring boot plugin" />
+    <MESSAGE value="troubleshooting poms - 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="troubleshooting poms - 2" />
   </component>
 </project>
