@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="workspace file committed" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="troubleshooting maven spring boot plugin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +183,7 @@
       <workItem from="1657801902245" duration="8310000" />
       <workItem from="1658232722556" duration="3146000" />
       <workItem from="1658238222863" duration="83000" />
-      <workItem from="1658238361029" duration="6497000" />
+      <workItem from="1658238361029" duration="6960000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -269,7 +269,28 @@
       <option name="project" value="LOCAL" />
       <updated>1658245821170</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="workspace file committed">
+      <created>1658246172985</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658246172985</updated>
+    </task>
+    <task id="LOCAL-00014" summary="troubleshooting maven spring boot plugin">
+      <created>1658246259467</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658246259467</updated>
+    </task>
+    <task id="LOCAL-00015" summary="troubleshooting maven spring boot plugin">
+      <created>1658246433087</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658246433087</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +324,7 @@
     <MESSAGE value="Merge branch 'main' of github.com:opticSquid/Clinic-Plus" />
     <MESSAGE value="moving all common dependencies to parent" />
     <MESSAGE value="workspace file committed" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace file committed" />
+    <MESSAGE value="troubleshooting maven spring boot plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="troubleshooting maven spring boot plugin" />
   </component>
 </project>
