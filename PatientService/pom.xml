@@ -6,7 +6,7 @@
         <groupId>com.sb.projects</groupId>
         <artifactId>ClinicPlus</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sb.projects.clinicplus.microservices</groupId>
     <artifactId>PatientService</artifactId>

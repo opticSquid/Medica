@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Modules sanitized by sonar lint 2 serious issues found" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Pushing workspace.xml because it had remained uncommitted">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +179,7 @@
       <workItem from="1657801902245" duration="8310000" />
       <workItem from="1658232722556" duration="3146000" />
       <workItem from="1658238222863" duration="83000" />
-      <workItem from="1658238361029" duration="2899000" />
+      <workItem from="1658238361029" duration="4243000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -207,7 +209,28 @@
       <option name="project" value="LOCAL" />
       <updated>1658241270145</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pushing workspace.xml because it had remained uncommited">
+      <created>1658241442000</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658241442000</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Pushing workspace.xml because it had remained uncommited">
+      <created>1658241450006</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658241450006</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Pushing workspace.xml because it had remained uncommitted">
+      <created>1658241462681</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658241462681</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +257,8 @@
     <MESSAGE value="All doctor service created and patient service is starting to be created" />
     <MESSAGE value="Patient Service created and Standardized with doctor service" />
     <MESSAGE value="Modules sanitized by sonar lint 2 serious issues found" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modules sanitized by sonar lint 2 serious issues found" />
+    <MESSAGE value="Pushing workspace.xml because it had remained uncommited" />
+    <MESSAGE value="Pushing workspace.xml because it had remained uncommitted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushing workspace.xml because it had remained uncommitted" />
   </component>
 </project>
