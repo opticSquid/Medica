@@ -4,7 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="changing few function names for using Lombok">
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Previously forgot to add AppoinmentService to git now adding it">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff.xml.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff/storage_v2/_src_/database/micro_medical.FvwaIQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff/storage_v2/_src_/database/micro_medical.FvwaIQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff/storage_v2/_src_/database/micro_medical.FvwaIQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff/storage_v2/_src_/database/micro_medical.FvwaIQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/077a84aad902191fd63fd374880221279f02a65d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/8/08033d05c4d3cc54d6e0913881966d20c06e1c97" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0de171b744d55d51f5d0301aae52d4ac9e142d02" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/170513ad07d596712bcb6e33e984361f9b5e8637" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1aec467c0ffedf5b5359fbe07a4030d1de577523" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/268f40517bf89df8e971fa990a70ac44f013df62" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37b0fae35443637ed0e21b8ad0ca1bf3c2c2e7e1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/40485438a3115951d9aecdba1056ac7dda704356" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/4749dea4a2c3dcb2650e3779e2b19fbb7858ac07" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4aea4b01447c69ab5cbf465ce97e6792086f101e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fb6c644b88e51ff5ee30078f1a56e38a03a5950" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53c25939f7fdbf7d674ec68bdd8b030e4b86b602" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55c8eb59bb3c305dc4f11cc7a973f5ea67916a16" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55ee003e56e81e0297a34640c855a285149cfb1d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b6177345687de2a07fe4e47f839b74d8bb34503" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5cf74356e507dd61f025bb38a517a562f4e9faa9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e39cb38e00cca93fba4fde480b58e9f1996ecb7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62bd0174e5b79cd010b2f96cbd8724d9f093a148" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/638841885ad6518f4d9d4c2ea510321a53b6002e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6a4d8124a9aef817e0c0907885e5e1697bbfde43" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d59d6e7f98feab8a0de9159df7692a31aefcd71" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/733555d4f73563b8cfa778ffdfe0a4dd0b3a9ef9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/951123ec5c041713c5f44cc74d40d31f1689a921" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a106acbd90b93270c10000b1d79e0fa515a6bc67" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9783ad726064ed2c8382755ce4d765e3b40aa2d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3aa8b7f1c613e43d3bb9d5ac52ac6603d945e89" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d48d29b3890b12a61078bd91a746bb4d4d56f7aa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8f5647e79cba66a4defb89dd840cacaa46bcf62" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f586d7d3688a3a3ac5e5a4c21c901fdb1760423a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7d5a31700231eee8e7a5f6772033e21be7e5495" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,6 +258,8 @@
       <workItem from="1660245076002" duration="224000" />
       <workItem from="1660245897929" duration="363000" />
       <workItem from="1660246440092" duration="877000" />
+      <workItem from="1660247555346" duration="375000" />
+      <workItem from="1660248095324" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -365,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660247242985</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="removed a redundant version tag">
+      <created>1660247907580</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1660247907580</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +456,8 @@
     <MESSAGE value="Successfully started AppointmentService could not reuse local modules in entity class so had to make duplicates removed some unnecessary functions from DoctorService Entity class and PatientService entity class" />
     <MESSAGE value="signing commit" />
     <MESSAGE value="changing few function names for using Lombok" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing few function names for using Lombok" />
+    <MESSAGE value="removed a redundant version tag" />
+    <MESSAGE value="Previously forgot to add AppoinmentService to git now adding it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Previously forgot to add AppoinmentService to git now adding it" />
   </component>
 </project>
