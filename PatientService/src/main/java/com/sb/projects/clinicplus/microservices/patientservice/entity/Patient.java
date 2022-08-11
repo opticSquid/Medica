@@ -22,13 +22,4 @@ public class Patient {
     private String name;
     private String email;
     private String contactNo;
-
-    // TODO: Need to check if by removing the given functions if lombok functions can still do the work
-    public int getpId() {
-        return pId;
-    }
-
-    public String getName() {
-        return name;
-    }
 }

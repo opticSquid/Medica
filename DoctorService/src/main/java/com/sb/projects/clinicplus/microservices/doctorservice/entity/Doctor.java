@@ -28,13 +28,4 @@ public class Doctor {
     private String degree;
     @NotBlank
     private String specialization;
-
-    // TODO: Need to check if by removing the given functions if lombok functions can still do the work
-    public int getdId() {
-        return dId;
-    }
-
-    public String getName() {
-        return name;
-    }
 }

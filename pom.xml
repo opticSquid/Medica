@@ -11,6 +11,7 @@
     <modules>
         <module>DoctorService</module>
         <module>PatientService</module>
+        <module>AppointmentService</module>
     </modules>
 
     <name>ClinicPlus</name>
