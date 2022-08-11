@@ -64,7 +64,7 @@ public class DoctorController {
     public ResponseEntity<String> registerNewDoctor(@RequestBody @Valid Doctor doctor) {
         Doctor savedDoctor = doctorService.addNewDoctor(doctor);
         if (doctor != null) {
-            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/doctors/{id}").buildAndExpand(savedDoctor.getdId()).toUri();
+            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/doctors/{id}").buildAndExpand(savedDoctor.getDId()).toUri();
             return ResponseEntity.created(location).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Object can not be processed");
@@ -75,7 +75,7 @@ public class DoctorController {
     public ResponseEntity<String> updateDoctorDetails(@PathVariable("id") Integer id, @RequestBody Doctor doctor) {
         Doctor updatedDoctor = doctorService.updateDoctor(id, doctor);
         if (updatedDoctor != null) {
-            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/doctors/{id}").buildAndExpand(updatedDoctor.getdId()).toUri();
+            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/doctors/{id}").buildAndExpand(updatedDoctor.getDId()).toUri();
             return ResponseEntity.status(204).location(location).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Update process on provided object can not be fulfilled");
@@ -84,7 +84,7 @@ public class DoctorController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteDoctor(@PathVariable("id") Integer id) {
-        if (doctorService.deleteDoctor(id)) {
+        if (Boolean.TRUE.equals(doctorService.deleteDoctor(id))) {
             return ResponseEntity.status(HttpStatus.OK).body("object deleted");
         } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("object could not be deleted, check for existing associations of this object with other records in database");

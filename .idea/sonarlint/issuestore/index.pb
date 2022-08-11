@@ -5,8 +5,6 @@ Y
 ).idea/httpRequests/http-requests-log.http,a\1\a106acbd90b93270c10000b1d79e0fa515a6bc67
 ]
 -.idea/httpRequests/2022-07-14T193908.500.json,6\2\62bd0174e5b79cd010b2f96cbd8724d9f093a148
-¶
-vPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/controller/PatientController.java,4\7\4749dea4a2c3dcb2650e3779e2b19fbb7858ac07
 ´
 {PatientService/src/test/java/com/sb/projects/clinicplus/microservices/patientservice/PatientDTOServiceApplicationTests.java,5\c\5cf74356e507dd61f025bb38a517a562f4e9faa9
 †
@@ -21,12 +19,8 @@ U
 %.github/workflows/codeql-analysis.yml,c\3\c3aa8b7f1c613e43d3bb9d5ac52ac6603d945e89
 B
 docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
-E
-DoctorService/pom.xml,5\5\55c8eb59bb3c305dc4f11cc7a973f5ea67916a16
 †
 pDoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/DoctorServiceApplication.java,b\9\b9783ad726064ed2c8382755ce4d765e3b40aa2d
-£
-sDoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/DoctorController.java,5\e\5e39cb38e00cca93fba4fde480b58e9f1996ecb7
 ù
 mDoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/DoctorService.java,6\3\638841885ad6518f4d9d4c2ea510321a53b6002e
 G
@@ -59,9 +53,5 @@ pAppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appoi
 hPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/entity/Patient.java,5\5\55ee003e56e81e0297a34640c855a285149cfb1d
 ö
 jPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/PatientRepo.java,0\8\08033d05c4d3cc54d6e0913881966d20c06e1c97
-J
-AppointmentService/pom.xml,2\6\268f40517bf89df8e971fa990a70ac44f013df62
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 ≥
 ÇAppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/controller/AppointmentController.java,d\8\d8f5647e79cba66a4defb89dd840cacaa46bcf62
