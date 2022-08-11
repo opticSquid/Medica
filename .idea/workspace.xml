@@ -4,39 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Emergency commit">
-      <change afterPath="$PROJECT_DIR$/AppointmentService/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/controller/AppointmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/entity/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/entity/Doctor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/entity/Patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/repo/AppointmentRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/service/AppointmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppointmentService/src/test/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad/storage_v2/_src_/database/micro_medical.FvwaIQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad/storage_v2/_src_/database/micro_medical.FvwaIQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad/storage_v2/_src_/database/micro_medical.FvwaIQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b2667cb-8ee0-4b7d-8164-e350afb8a4ad/storage_v2/_src_/database/micro_medical.FvwaIQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="signing commit">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/DoctorRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/DoctorRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DoctorService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/PatientRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/PatientRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,8 +76,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "c1e60e80b1753830db71b33a34583146"
+    "settings.editor.selected.configurable": "vcs.Git",
+    "spring.configuration.checksum": "ee65f7f70c02779978d0105e1eb1f6b6"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -244,6 +214,8 @@
       <workItem from="1658597515134" duration="732000" />
       <workItem from="1660207474910" duration="4672000" />
       <workItem from="1660223364848" duration="8440000" />
+      <workItem from="1660232069161" duration="2742000" />
+      <workItem from="1660245076002" duration="224000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -371,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658247668523</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Successfully started AppointmentService could not reuse local modules in entity class so had to make duplicates removed some unnecessary functions from DoctorService Entity class and PatientService entity class">
+      <created>1660233109505</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1660233109505</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +388,8 @@
     <MESSAGE value="troubleshooting poms - 2" />
     <MESSAGE value="troubleshooting poms - 3 and adding sonarCloud key and organization" />
     <MESSAGE value="final check on both actions on GitHub" />
-    <option name="LAST_COMMIT_MESSAGE" value="final check on both actions on GitHub" />
+    <MESSAGE value="Successfully started AppointmentService could not reuse local modules in entity class so had to make duplicates removed some unnecessary functions from DoctorService Entity class and PatientService entity class" />
+    <MESSAGE value="signing commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="signing commit" />
   </component>
 </project>
