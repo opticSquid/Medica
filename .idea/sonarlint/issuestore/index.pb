@@ -55,3 +55,7 @@ hPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientse
 jPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/PatientRepo.java,0\8\08033d05c4d3cc54d6e0913881966d20c06e1c97
 ³
 ‚AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/controller/AppointmentController.java,d\8\d8f5647e79cba66a4defb89dd840cacaa46bcf62
+£
+sDoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/DoctorController.java,5\e\5e39cb38e00cca93fba4fde480b58e9f1996ecb7
+¦
+vPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/controller/PatientController.java,4\7\4749dea4a2c3dcb2650e3779e2b19fbb7858ac07

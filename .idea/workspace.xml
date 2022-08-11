@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="signing commit">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="changing few function names for using Lombok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +216,7 @@
       <workItem from="1660232069161" duration="2742000" />
       <workItem from="1660245076002" duration="224000" />
       <workItem from="1660245897929" duration="363000" />
-      <workItem from="1660246440092" duration="335000" />
+      <workItem from="1660246440092" duration="877000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -359,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660246001878</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="changing few function names for using Lombok">
+      <created>1660247242985</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1660247242985</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +405,7 @@
     <MESSAGE value="final check on both actions on GitHub" />
     <MESSAGE value="Successfully started AppointmentService could not reuse local modules in entity class so had to make duplicates removed some unnecessary functions from DoctorService Entity class and PatientService entity class" />
     <MESSAGE value="signing commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="signing commit" />
+    <MESSAGE value="changing few function names for using Lombok" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing few function names for using Lombok" />
   </component>
 </project>
