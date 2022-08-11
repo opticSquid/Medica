@@ -37,8 +37,6 @@ tAppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appoi
 vAppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/repo/AppointmentRepo.java,1\a\1aec467c0ffedf5b5359fbe07a4030d1de577523
 ¬
 |AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/service/AppointmentService.java,5\b\5b6177345687de2a07fe4e47f839b74d8bb34503
-¯
-AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplication.java,d\4\d48d29b3890b12a61078bd91a746bb4d4d56f7aa
 µ
 „AppointmentService/src/test/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplicationTests.java,4\a\4aea4b01447c69ab5cbf465ce97e6792086f101e
 Ÿ
@@ -53,8 +51,6 @@ pAppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appoi
 hPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/entity/Patient.java,5\5\55ee003e56e81e0297a34640c855a285149cfb1d
 š
 jPatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/PatientRepo.java,0\8\08033d05c4d3cc54d6e0913881966d20c06e1c97
-³
-‚AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/controller/AppointmentController.java,d\8\d8f5647e79cba66a4defb89dd840cacaa46bcf62
 £
 sDoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/DoctorController.java,5\e\5e39cb38e00cca93fba4fde480b58e9f1996ecb7
 ¦
@@ -65,9 +61,6 @@ E
 DoctorService/pom.xml,5\5\55c8eb59bb3c305dc4f11cc7a973f5ea67916a16
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 w
 G.idea/sonarlint/issuestore/7/3/733555d4f73563b8cfa778ffdfe0a4dd0b3a9ef9,9\0\90a502388cf1422d7c171af7595e8bb00681091b
 w
@@ -96,14 +89,10 @@ w
 G.idea/sonarlint/issuestore/6/2/62bd0174e5b79cd010b2f96cbd8724d9f093a148,2\5\2594b2db7e65303182f01b29acdf7dee265e59df
 w
 G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b\4\b4a0b63ce8560bbc5de0f9995c20cc861dc2adb3
-n
->.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff.xml.tmp,d\e\dece6a8ee933c315709f75eabb93be1a8851c63e
 w
 G.idea/sonarlint/issuestore/a/1/a106acbd90b93270c10000b1d79e0fa515a6bc67,a\f\afb59e81868cb1c777f1cda119fe747925e7df39
 w
 G.idea/sonarlint/issuestore/5/b/5b6177345687de2a07fe4e47f839b74d8bb34503,a\a\aadbb9f3544995c4f3be2244d48c0e74727e3993
-j
-:.idea/dataSources/8fd99a7c-ddf4-4d39-b15e-658a050c12ff.xml,e\3\e3cab039eab138dbc309d9e77ddc043eaedffe9b
 w
 G.idea/sonarlint/issuestore/b/9/b9783ad726064ed2c8382755ce4d765e3b40aa2d,0\2\0244e41858f684defecbb800bcd396d6630b5236
 w
@@ -130,13 +119,9 @@ w
 G.idea/sonarlint/issuestore/f/7/f7d5a31700231eee8e7a5f6772033e21be7e5495,5\f\5f804d3fb748ab92ec86a3c57033eed29410e4f4
 w
 G.idea/sonarlint/issuestore/4/f/4fb6c644b88e51ff5ee30078f1a56e38a03a5950,5\a\5a277eec7622f726cfa847ec4a15a2ed33847a4c
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 w
 G.idea/sonarlint/issuestore/1/7/170513ad07d596712bcb6e33e984361f9b5e8637,d\3\d352a3dc5ecc587370b83a2937a02a0d7319736f
 w
 G.idea/sonarlint/issuestore/6/d/6d59d6e7f98feab8a0de9159df7692a31aefcd71,5\1\51a277d31121e837ea92d7c34f738cb36acde2c4
 w
 G.idea/sonarlint/issuestore/9/5/951123ec5c041713c5f44cc74d40d31f1689a921,4\4\440c300fa13cce87d62fb59775aff654f90c0e8f
-w
-G.idea/sonarlint/issuestore/d/4/d48d29b3890b12a61078bd91a746bb4d4d56f7aa,6\e\6ef41d91974c7ed7ca158663679d3e73186129a2
