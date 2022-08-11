@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="Previously forgot to add AppoinmentService to git now adding it">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplication.java" afterDir="false" />
+    <list default="true" id="8a476e26-04f9-4826-bfe9-61f1210409d5" name="Changes" comment="AppointmentService addition try 2">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55c8eb59bb3c305dc4f11cc7a973f5ea67916a16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e39cb38e00cca93fba4fde480b58e9f1996ecb7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8f5647e79cba66a4defb89dd840cacaa46bcf62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppointmentService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppointmentService/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/AppointmentService/HELP.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +226,7 @@
       <workItem from="1660246440092" duration="877000" />
       <workItem from="1660247555346" duration="375000" />
       <workItem from="1660248095324" duration="123000" />
-      <workItem from="1660248764100" duration="144000" />
+      <workItem from="1660248764100" duration="561000" />
     </task>
     <task id="LOCAL-00001" summary="Parent Project created for Clinic Plus">
       <created>1657780754150</created>
@@ -377,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660247907580</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="AppointmentService addition try 2">
+      <created>1660249049971</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1660249049971</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,6 +433,7 @@
     <MESSAGE value="changing few function names for using Lombok" />
     <MESSAGE value="removed a redundant version tag" />
     <MESSAGE value="Previously forgot to add AppoinmentService to git now adding it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Previously forgot to add AppoinmentService to git now adding it" />
+    <MESSAGE value="AppointmentService addition try 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="AppointmentService addition try 2" />
   </component>
 </project>

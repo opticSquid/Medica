@@ -9,15 +9,14 @@
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sb.projects.clinicplus.microservices</groupId>
-    <artifactId>DoctorService</artifactId>
+    <artifactId>AppointmentService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>DoctorService</name>
-    <description>DoctorService</description>
+    <name>AppointmentService</name>
+    <description>AppointmentService</description>
     <properties>
         <java.version>17</java.version>
     </properties>
     <dependencies/>
-
 
     <build>
         <plugins>

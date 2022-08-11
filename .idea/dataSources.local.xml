@@ -16,10 +16,5 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="AppointmentService/Hibernate" uuid="0fe840c3-a83f-4322-aec3-2bcb1163e447">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
-      <user-name>soumalya</user-name>
-      <schema-mapping />
-    </data-source>
   </component>
 </project>
