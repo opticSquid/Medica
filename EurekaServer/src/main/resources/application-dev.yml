@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/eureka_server
+    username: soumalya
+    password: PkNLm@#2357
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true

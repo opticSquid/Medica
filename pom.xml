@@ -12,6 +12,7 @@
         <module>DoctorService</module>
         <module>PatientService</module>
         <module>AppointmentService</module>
+        <module>EurekaServer</module>
     </modules>
 
     <name>ClinicPlus</name>

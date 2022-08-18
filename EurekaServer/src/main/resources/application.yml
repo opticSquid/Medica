@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka-server
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+logging:
+  level:
+    web: debug
