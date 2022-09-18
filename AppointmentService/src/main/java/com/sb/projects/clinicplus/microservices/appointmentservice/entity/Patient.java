@@ -17,8 +17,8 @@ import javax.persistence.Id;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer pId;
     @NonNull
+    private Integer pId;
     private String name;
     private String email;
     private String contactNo;

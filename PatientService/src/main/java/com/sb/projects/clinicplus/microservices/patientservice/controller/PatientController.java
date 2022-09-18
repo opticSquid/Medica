@@ -12,7 +12,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/patients")
+@RequestMapping("/")
 @Slf4j
 public class PatientController {
     private final PatientService patientService;
@@ -21,7 +21,7 @@ public class PatientController {
         this.patientService = patientService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public Iterable<Patient> getPatients() {
         return patientService.fetchAllPatients();
     }

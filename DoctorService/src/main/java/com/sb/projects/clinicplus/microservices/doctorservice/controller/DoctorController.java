@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/doctors")
+@RequestMapping("/")
 @Slf4j
 public class DoctorController {
     private final DoctorService doctorService;
@@ -30,8 +30,7 @@ public class DoctorController {
             return ResponseEntity.notFound().build();
         }
     }
-
-    @GetMapping
+    @GetMapping("/all")
     public Iterable<Doctor> getDoctors() {
         return doctorService.getAllDoctors();
     }

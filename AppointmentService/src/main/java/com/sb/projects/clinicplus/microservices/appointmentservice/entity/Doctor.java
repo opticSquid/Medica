@@ -1,6 +1,7 @@
 package com.sb.projects.clinicplus.microservices.appointmentservice.entity;
 
 import lombok.*;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
