@@ -20,4 +20,3 @@ networks:
 
 volumes:
   postgres:
-  pgadmin:
