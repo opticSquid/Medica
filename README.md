@@ -1,4 +1,4 @@
-# Clinic ++
+# Medica
 
 This is a project for building a modern event driven platform for a large health institution like a hospital where different aspects of daily functioning of a hospital is brought under one roof in a scalable way using microservices and an event driven architecture to make the application scale well for future work loads and being readily available on cloud.
 
