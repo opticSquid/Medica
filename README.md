@@ -7,6 +7,7 @@ This is a project for building a modern open source microservice driven platform
 - provide a stable core platform for the service makers and cluents to rely on
 - give some basic default service set
 - Create a proper maeket place with incentive for the service maker to develop this platform.
+
 Developers will be developing for this platform because they will get monetary incentive
 Clients will choose this platform because they can decide for what sexacty ervices they need to pay. As the whole code is publically available there will no questions rased on user data privacy.
 
