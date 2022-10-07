@@ -1,4 +1,7 @@
 # Medica
+<div align="center">
+  <img src="./logo.png" alt="Logo Image" style="width:70%;object-fit: contain">
+</div>
 
 This is a project for building a modern open source microservice driven platform for a large health institution like a hospital where different aspects of daily functioning of the institution is brought under one roof in a scalable way using microservices and an event driven architecture to make the application scale well for future work loads and being readily available on cloud. We want to build a platform with its own marketplace where we can have some in house and some 3rd party plugin services which will extend and add to the capability of this platform given that the services maintain a common standard and can communicate with each other giving rise to seamless integreation and interoperability.Every customer can have their own add on services besides some basic default services that come built in. This whiole experience can be customized by the client by different plugins they choose which will tailor to their needs. Plugins can be both free of cost or can come with some cost dependig on the 3rd party service maker. In this repo our goal is to
 - provide a stable core platform for the service makers and cluents to rely on
