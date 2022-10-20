@@ -2,6 +2,7 @@ package com.sb.projects.clinicplus.microservices.patientservice.controller;
 
 
 import com.sb.projects.clinicplus.microservices.patientservice.entity.Patient;
+import com.sb.projects.clinicplus.microservices.patientservice.pojo.PatientPojo;
 import com.sb.projects.clinicplus.microservices.patientservice.service.PatientService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -21,11 +22,19 @@ public class PatientController {
         this.patientService = patientService;
     }
 
+    /**
+     * Gets the list of all patients
+     */
     @GetMapping("/all")
     public Iterable<Patient> getPatients() {
         return patientService.fetchAllPatients();
     }
 
+    /**
+     * This route returns the details of a patient whose id is being provided
+     *
+     * @param id is the patient id
+     */
     @GetMapping("/id/{id}")
     public ResponseEntity<Patient> getPatientById(@PathVariable("id") Integer id) {
         Patient patient = patientService.getPatientById(id);
@@ -58,7 +67,7 @@ public class PatientController {
     }
 
     @PostMapping(value = "/new")
-    public ResponseEntity<String> registerNewPatient(@RequestBody Patient patient) {
+    public ResponseEntity<String> registerNewPatient(@RequestBody PatientPojo patient) {
         Patient savedPatient = patientService.addNewPatient(patient);
         if (savedPatient != null) {
             URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/patients/{id}").buildAndExpand(savedPatient.getPId()).toUri();
@@ -69,10 +78,10 @@ public class PatientController {
     }
 
     @PutMapping(value = "/update/{id}")
-    public ResponseEntity<String> updatePatientDetails(@PathVariable("id") Integer id, @RequestBody Patient patient) {
+    public ResponseEntity<String> updatePatientDetails(@PathVariable("id") Integer id, @RequestBody PatientPojo patient) {
         Patient updatedPatient = patientService.updatePatient(id, patient);
         if (updatedPatient != null) {
-            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/patients/{id}").buildAndExpand(updatedPatient.getPId()).toUri();
+            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(updatedPatient.getPId()).toUri();
             return ResponseEntity.status(204).location(location).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Update process on provided object can not be fulfilled");

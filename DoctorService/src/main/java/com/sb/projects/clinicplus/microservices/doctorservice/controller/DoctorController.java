@@ -63,7 +63,7 @@ public class DoctorController {
     public ResponseEntity<String> registerNewDoctor(@RequestBody @Valid Doctor doctor) {
         Doctor savedDoctor = doctorService.addNewDoctor(doctor);
         if (doctor != null) {
-            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/doctors/{id}").buildAndExpand(savedDoctor.getDId()).toUri();
+            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(savedDoctor.getDId()).toUri();
             return ResponseEntity.created(location).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Object can not be processed");
@@ -74,7 +74,7 @@ public class DoctorController {
     public ResponseEntity<String> updateDoctorDetails(@PathVariable("id") Integer id, @RequestBody Doctor doctor) {
         Doctor updatedDoctor = doctorService.updateDoctor(id, doctor);
         if (updatedDoctor != null) {
-            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/doctors/{id}").buildAndExpand(updatedDoctor.getDId()).toUri();
+            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(updatedDoctor.getDId()).toUri();
             return ResponseEntity.status(204).location(location).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Update process on provided object can not be fulfilled");

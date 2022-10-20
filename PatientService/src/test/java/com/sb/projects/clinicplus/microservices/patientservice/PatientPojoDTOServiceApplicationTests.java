@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import javax.validation.constraints.AssertTrue;
 
 @SpringBootTest
-class PatientDTOServiceApplicationTests {
+class PatientPojoDTOServiceApplicationTests {
 
     @Test
     void contextLoads() {

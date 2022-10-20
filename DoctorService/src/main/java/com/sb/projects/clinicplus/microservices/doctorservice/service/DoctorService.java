@@ -56,7 +56,7 @@ public class DoctorService {
         if (existingDoctor != null) {
             return doctorRepo.save(doctor);
         } else {
-            log.error("Patient could not be updated, because requested patient could not be found");
+            log.error("Doctor could not be updated, because requested doctor id could not be found");
             return null;
         }
     }

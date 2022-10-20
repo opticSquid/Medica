@@ -1,5 +1,6 @@
 package com.sb.projects.clinicplus.microservices.patientservice.entity;
 
+import com.sb.projects.clinicplus.microservices.patientservice.pojo.PatientPojo;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -21,5 +22,12 @@ public class Patient {
     @NonNull
     private String name;
     private String email;
+    @NonNull
     private String contactNo;
+
+    public Patient(PatientPojo patient) {
+        this.name = patient.getName();
+        this.email = patient.getEmail();
+        this.contactNo = patient.getContactNo();
+    }
 }
