@@ -1,16 +1,8 @@
 spring:
   application:
-    name: eureka-server
-  datasource:
-    driver-class-name: org.postgresql.Driver
+    name: EUREKA
   profiles:
     active: dev
-  jpa:
-    hibernate:
-      ddl-auto: update
-
-server:
-  port: 8761
 
 eureka:
   client:
@@ -19,4 +11,4 @@ eureka:
 
 logging:
   level:
-    web: debug
+    web: error

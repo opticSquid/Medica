@@ -9,15 +9,15 @@ spring:
         - id: doctor
           uri: lb://DOCTOR
           predicates:
-            - Path= /doctor
+            - Path=/doctor/**
         - id: patient
           uri: lb://PATIENT
           predicates:
-            - Path= /patient
+            - Path=/patient/**
         - id: appointment
           uri: lb://APPOINTMENT
           predicates:
-            - Path= /appointment
+            - Path=/appointment/**
 logging:
   level:
     web: error

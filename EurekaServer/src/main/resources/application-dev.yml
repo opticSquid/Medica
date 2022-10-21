@@ -1,9 +1,5 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5435/medica_eureka_server
-    username: soumalya
-    password: PkNLm@#2357
-  jpa:
-    properties:
-      hibernate:
-        format_sql: true
+logging:
+  level:
+    web: debug
+server:
+  port: 8761

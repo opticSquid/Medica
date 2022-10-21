@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="medica@localhost" uuid="71d36d9d-eec6-4cd9-a83b-8d77470dbdcb">
+    <data-source source="LOCAL" name="medica@docker" uuid="2c222a24-cd79-439f-99db-008b018f237f">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <remarks>Main Database of Medica Application</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5435/medica</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
