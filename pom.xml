@@ -9,10 +9,11 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>EurekaServer</module>
+        <module>Gateway</module>
         <module>DoctorService</module>
         <module>PatientService</module>
         <module>AppointmentService</module>
-        <module>EurekaServer</module>
     </modules>
 
     <name>ClinicPlus</name>

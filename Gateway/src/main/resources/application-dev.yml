@@ -1,0 +1,18 @@
+logging:
+  level:
+    web: debug
+server:
+  port: 8088
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/medica_gateway
+    username: soumalya
+    password: PkNLm@#2357
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true

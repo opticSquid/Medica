@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: doctor
+          uri: lb://DOCTOR
+          predicates:
+            - Path= /doctor
+        - id: patient
+          uri: lb://PATIENT
+          predicates:
+            - Path= /patient
+        - id: appointment
+          uri: lb://APPOINTMENT
+          predicates:
+            - Path= /appointment
+logging:
+  level:
+    web: error
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+
+
