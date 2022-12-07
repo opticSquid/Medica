@@ -1,4 +1,4 @@
-package com.sb.projects.clinicplus.microservices.gateway;
+package com.sb.projects.medica.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

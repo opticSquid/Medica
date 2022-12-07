@@ -4,77 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/GatewayApplication.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/config/RestConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/controller/AppointmentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/entity/Appointment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/entity/Doctor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/entity/Patient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/pojo/AppointmentPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/repo/AppointmentRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/java/com/sb/projects/clinicplus/microservices/appointmentservice/service/AppointmentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/main/resources/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/test/java/com/sb/projects/clinicplus/microservices/appointmentservice/AppointmentServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentService/src/test/java/com/sb/projects/clinicplus/microservices/appointmentservice/service/AppointmentServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/DoctorServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/controller/DoctorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/entity/Doctor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/repository/DoctorRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/java/com/sb/projects/clinicplus/microservices/doctorservice/service/DoctorService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/main/resources/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoctorService/src/test/java/com/sb/projects/clinicplus/microservices/doctorservice/DoctorServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EurekaServer/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EurekaServer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Adding project run configurations">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2c222a24-cd79-439f-99db-008b018f237f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e588b7e0-86e4-4d47-b9fb-f6445b103317.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e588b7e0-86e4-4d47-b9fb-f6445b103317/storage_v2/_src_/database/medica_eureka_server.xQ61yA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e588b7e0-86e4-4d47-b9fb-f6445b103317/storage_v2/_src_/database/medica_eureka_server.xQ61yA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e588b7e0-86e4-4d47-b9fb-f6445b103317/storage_v2/_src_/database/medica_eureka_server.xQ61yA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/EurekaServerApplication.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/GatewayApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/GatewayApplication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurekaServer/src/main/java/com/sb/projects/clinicplus/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/main/java/com/sb/projects/medica/eurekaserver/EurekaServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/com/sb/projects/clinicplus/microservices/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/sb/projects/clinicplus/microservices/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/src/main/java/com/example/microservices/MicroServicesApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MicroServices/src/test/java/com/example/microservices/MicroServicesApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/PatientServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/controller/PatientController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/entity/Patient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/pojo/PatientPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/repo/PatientRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/java/com/sb/projects/clinicplus/microservices/patientservice/service/PatientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/main/resources/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PatientService/src/test/java/com/sb/projects/clinicplus/microservices/patientservice/PatientPojoDTOServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/java/com/sb/projects/clinicplus/microservices/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/sb/projects/medica/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/test/java/com/sb/projects/clinicplus/microservices/gateway/GatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,18 +31,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -116,6 +50,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -123,12 +59,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/media/soumalya/Project/CTS/Autum/my projects/Medica",
+    "last_opened_file_path": "E:/CTS/Autum/my projects/Medica",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "38ada5ddf929d7106a3a6691cbf98075",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -136,6 +80,11 @@
     ]
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -144,6 +93,10 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AppointmentServiceApplication">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -163,6 +116,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -175,8 +129,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666336843144</updated>
-      <workItem from="1666336844730" duration="5173000" />
+      <workItem from="1666336844730" duration="6050000" />
+      <workItem from="1669395753885" duration="2342000" />
+      <workItem from="1669398384609" duration="1700000" />
+      <workItem from="1670425836577" duration="519000" />
+      <workItem from="1670426639310" duration="570000" />
+      <workItem from="1670432097092" duration="301000" />
+      <workItem from="1670432483234" duration="295000" />
+      <workItem from="1670432892646" duration="2283000" />
     </task>
+    <task id="LOCAL-00001" summary="Load Balancing in case of multiple instances of a service and API Gateway working">
+      <created>1666342419631</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666342419631</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding project run configurations">
+      <created>1666342468442</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666342468442</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,5 +168,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Load Balancing in case of multiple instances of a service and API Gateway working" />
+    <MESSAGE value="Adding project run configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding project run configurations" />
   </component>
 </project>
