@@ -1,3 +1,4 @@
+version: '3.3'
 services:
   postgres:
     container_name: postgres
@@ -13,10 +14,25 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+  mysql:
+    container_name: mysql
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: PkNLm@#$2357
+      MYSQL_USER: soumalya
+      MYSQL_PASSWORD: QsCAzX@#$%24680
+    ports:
+      - "5000:3306"
+    networks:
+      - mysql
+    restart: unless-stopped
 
 networks:
   postgres:
     driver: bridge
+  mysql:
+    driver: bridge
 
 volumes:
   postgres:
+  mysql:
