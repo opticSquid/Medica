@@ -1,8 +1,8 @@
 package com.sb.projects.medica.microservices.appointmentservice.service;
 
 import com.sb.projects.medica.microservices.appointmentservice.entity.Appointment;
-import com.sb.projects.medica.microservices.appointmentservice.entity.Doctor;
-import com.sb.projects.medica.microservices.appointmentservice.entity.Patient;
+import com.sb.projects.medica.microservices.appointmentservice.pojo.Doctor;
+import com.sb.projects.medica.microservices.appointmentservice.pojo.Patient;
 import com.sb.projects.medica.microservices.appointmentservice.pojo.AppointmentPojo;
 import com.sb.projects.medica.microservices.appointmentservice.repo.AppointmentRepo;
 import lombok.AllArgsConstructor;

@@ -1,19 +1,5 @@
 version: '3.3'
 services:
-  postgres:
-    container_name: postgres
-    image: postgres
-    environment:
-      POSTGRES_USER: soumalya
-      POSTGRES_PASSWORD: PkNLm@#2357
-      PGDATA: /data/postgres
-    volumes:
-      - postgres:/data/postgres
-    ports:
-      - "5435:5432"
-    networks:
-      - postgres
-    restart: unless-stopped
   mysql:
     container_name: mysql
     image: mysql
@@ -28,11 +14,8 @@ services:
     restart: unless-stopped
 
 networks:
-  postgres:
-    driver: bridge
   mysql:
     driver: bridge
 
 volumes:
-  postgres:
   mysql:
