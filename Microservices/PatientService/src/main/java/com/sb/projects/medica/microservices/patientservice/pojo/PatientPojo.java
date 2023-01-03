@@ -3,6 +3,7 @@ package com.sb.projects.medica.microservices.patientservice.pojo;
 import lombok.*;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
 
 @Getter
 @Setter
@@ -16,6 +17,7 @@ public class PatientPojo {
     private String email;
     @NonNull
     private String contactNo;
+    @Min(0)
     private Integer age;
     private String gender;
     private String medicalConditions;

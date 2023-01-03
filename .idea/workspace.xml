@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Migrating DB from postgres to MySql because of the requirement of CTS">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Creating new Service AuthenticationService and repointing packages">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/repository/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/java/com/sb/projects/medica/microservices/patientservice/entity/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/java/com/sb/projects/medica/microservices/patientservice/entity/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/java/com/sb/projects/medica/microservices/patientservice/pojo/PatientPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/java/com/sb/projects/medica/microservices/patientservice/pojo/PatientPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/java/com/sb/projects/medica/microservices/patientservice/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/java/com/sb/projects/medica/microservices/patientservice/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authentication/AuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/AuthenticationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/test/java/com/sb/projects/medica/microservices/authentication/AuthenticationApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/test/java/com/sb/projects/medica/microservices/authenticationservice/AuthenticationServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,6 +45,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2GR1zGsKA6KLJ9r6GdStyjthU8w" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,12 +58,14 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "15",
-    "RequestMappingsPanelWidth1": "15",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "E:/CTS/Autum/my projects/Medica",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -60,7 +76,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "b92004a9ff3e7e523390b8a2c3c30752",
+    "spring.configuration.checksum": "ae596082845855e89b931045191d3a36",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -70,6 +86,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn install" />
@@ -82,10 +101,23 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+  <component name="RunManager" selected="Spring Boot.AuthenticationServiceApplication">
     <configuration name="AppointmentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="AppointmentService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sb.projects.medica.microservices.appointmentservice.AppointmentServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="AuthenticationService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sb.projects.medica.microservices.authenticationservice.AuthenticationServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sb.projects.medica.microservices.authenticationservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,6 +184,7 @@
       <item itemvalue="Spring Boot.PatientServiceApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.AuthenticationServiceApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -184,7 +217,8 @@
       <workItem from="1672205103123" duration="3921000" />
       <workItem from="1672210469553" duration="282000" />
       <workItem from="1672211776696" duration="1256000" />
-      <workItem from="1672754373015" duration="4163000" />
+      <workItem from="1672754373015" duration="6695000" />
+      <workItem from="1672761692079" duration="730000" />
     </task>
     <task id="LOCAL-00001" summary="Load Balancing in case of multiple instances of a service and API Gateway working">
       <created>1666342419631</created>
@@ -214,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670963532991</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creating new Service AuthenticationService and repointing packages">
+      <created>1672760157257</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672760157257</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +277,7 @@
     <MESSAGE value="Adding project run configurations" />
     <MESSAGE value="Project working on windows" />
     <MESSAGE value="Migrating DB from postgres to MySql because of the requirement of CTS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrating DB from postgres to MySql because of the requirement of CTS" />
+    <MESSAGE value="Creating new Service AuthenticationService and repointing packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating new Service AuthenticationService and repointing packages" />
   </component>
 </project>

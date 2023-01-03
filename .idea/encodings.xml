@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/Gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Microservices/AppointmentService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Microservices/AppointmentService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Microservices/DoctorService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Microservices/DoctorService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Microservices/PatientService/src/main/java" charset="UTF-8" />

@@ -1,10 +1,10 @@
-package com.sb.projects.medica.microservices.authentication;
+package com.sb.projects.medica.microservices.authenticationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthenticationApplicationTests {
+class AuthenticationServiceApplicationTests {
 
     @Test
     void contextLoads() {
