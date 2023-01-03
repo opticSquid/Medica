@@ -56,7 +56,7 @@ public class PatientService {
         log.info("Incoming patient (to be updated): " + patient);
         Patient existingPatient = getPatientById(id);
         if (existingPatient != null) {
-            Patient tobeSaved = new Patient(id, patient.getName(), patient.getEmail(), patient.getContactNo());
+            Patient tobeSaved = new Patient(id, patient.getName(), patient.getEmail(), patient.getContactNo(), patient.getAge(), patient.getGender(), patient.getMedicalConditions());
             patientRepo.save(tobeSaved);
             return tobeSaved;
         } else {

@@ -26,7 +26,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="appointments" />
+          <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

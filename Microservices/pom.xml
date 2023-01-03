@@ -9,11 +9,12 @@
         <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <modules>
+        <module>AuthenticationService</module>
         <module>DoctorService</module>
         <module>PatientService</module>
         <module>AppointmentService</module>
     </modules>
-    <groupId>com.sb.projects.clinicplus</groupId>
+    <groupId>com.sb.projects.medica</groupId>
     <artifactId>MicroServices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>MicroServices</name>
