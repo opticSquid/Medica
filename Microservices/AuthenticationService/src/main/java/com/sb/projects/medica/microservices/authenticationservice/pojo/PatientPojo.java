@@ -9,7 +9,7 @@ import javax.validation.constraints.Min;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class PatientPojo extends DoctorPojo {
+public class PatientPojo extends BasicDetailsPojo {
     @Min(0)
     private Integer age;
     @GenderType

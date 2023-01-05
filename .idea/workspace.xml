@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Creating different entities in User Package">
+    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Removed duplicate dependencies from AuthenticationService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/DoctorPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/DoctorPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/NewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/NewUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/PatientPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/PatientPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/BasicDetailsPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,40 +54,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/CTS/Autum/my projects/Medica&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;ae596082845855e89b931045191d3a36&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "E:/CTS/Autum/my projects/Medica",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "ae596082845855e89b931045191d3a36",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -213,7 +221,8 @@
       <workItem from="1672211776696" duration="1256000" />
       <workItem from="1672754373015" duration="6695000" />
       <workItem from="1672761692079" duration="4892000" />
-      <workItem from="1672815554535" duration="2673000" />
+      <workItem from="1672815554535" duration="3426000" />
+      <workItem from="1672902525282" duration="8125000" />
     </task>
     <task id="LOCAL-00001" summary="Load Balancing in case of multiple instances of a service and API Gateway working">
       <created>1666342419631</created>
@@ -257,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672766538714</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adding automatic Open-api documentation to microservices">
+      <created>1672831132324</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672831132324</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Removed duplicate dependencies from AuthenticationService">
+      <created>1672831343837</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672831343837</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +304,8 @@
     <MESSAGE value="Migrating DB from postgres to MySql because of the requirement of CTS" />
     <MESSAGE value="Creating new Service AuthenticationService and repointing packages" />
     <MESSAGE value="Creating different entities in User Package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating different entities in User Package" />
+    <MESSAGE value="Adding automatic Open-api documentation to microservices" />
+    <MESSAGE value="Removed duplicate dependencies from AuthenticationService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed duplicate dependencies from AuthenticationService" />
   </component>
 </project>

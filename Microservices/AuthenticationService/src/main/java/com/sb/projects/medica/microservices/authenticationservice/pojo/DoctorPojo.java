@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class DoctorPojo extends UserPojo {
+public class DoctorPojo extends BasicDetailsPojo {
     @NotNull
     private String regNo;
     @NotBlank
