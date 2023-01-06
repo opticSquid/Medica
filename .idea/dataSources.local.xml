@@ -26,7 +26,10 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="authentication" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

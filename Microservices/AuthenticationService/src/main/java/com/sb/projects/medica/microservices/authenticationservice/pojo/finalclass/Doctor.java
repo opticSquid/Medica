@@ -5,10 +5,10 @@ import lombok.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 @Getter
-@Setter
 @ToString
 @NoArgsConstructor
 public class Doctor extends BasicDetails {
+    private Integer docId;
     @NotNull
     private String regNo;
     @NotBlank
@@ -22,5 +22,9 @@ public class Doctor extends BasicDetails {
         this.degree = degree;
         this.specialization = specialization;
         this.experience = experience;
+    }
+
+    public void setDocId(@NotNull Integer docId) {
+        this.docId = docId;
     }
 }

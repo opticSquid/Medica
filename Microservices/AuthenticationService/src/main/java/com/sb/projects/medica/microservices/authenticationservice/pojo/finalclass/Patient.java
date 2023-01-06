@@ -1,15 +1,18 @@
 package com.sb.projects.medica.microservices.authenticationservice.pojo.finalclass;
 
 import com.sb.projects.medica.microservices.authenticationservice.validation.GenderType;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Getter
-@Setter
 @ToString
 @NoArgsConstructor
 public class Patient extends BasicDetails {
+    private Integer patId;
     @Min(0)
     private Integer age;
     @GenderType
@@ -21,5 +24,9 @@ public class Patient extends BasicDetails {
         this.age = age;
         this.gender = gender;
         this.medicalConditions = medicalConditions;
+    }
+
+    public void setPatId(@NotNull Integer patId) {
+        this.patId = patId;
     }
 }

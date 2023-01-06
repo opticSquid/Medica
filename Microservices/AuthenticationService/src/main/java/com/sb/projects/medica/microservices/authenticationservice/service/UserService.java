@@ -35,6 +35,7 @@ public class UserService {
        Integer userId =  addNewUser(basicPatientDetails);
         //This patient should be sent to patient microservice
         Patient patient = new Patient(patientDetails.getName(), patientDetails.getEmail(), patientDetails.getContactNo(), patientDetails.getAge(), patientDetails.getGender(), patientDetails.getMedicalConditions());
+        patient.setPatId(userId);
         return userId;
     }
     public Integer addNewDoctor(DoctorDetailsPojo doctorDetails){
@@ -42,6 +43,7 @@ public class UserService {
         Integer userId = addNewUser(basicDoctorDetails);
         // This doctor should be sent to doctor microservice
         Doctor doctor = new Doctor(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getRegNo(), doctorDetails.getDegree(), doctorDetails.getSpecialization(), doctorDetails.getExperience());
+        doctor.setDocId(userId);
         return userId;
     }
 
