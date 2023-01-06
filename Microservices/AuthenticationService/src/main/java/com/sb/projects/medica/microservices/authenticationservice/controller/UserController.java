@@ -1,5 +1,6 @@
 package com.sb.projects.medica.microservices.authenticationservice.controller;
 
+import com.sb.projects.medica.microservices.authenticationservice.pojo.DoctorDetailsPojo;
 import com.sb.projects.medica.microservices.authenticationservice.pojo.PatientDetailsPojo;
 import com.sb.projects.medica.microservices.authenticationservice.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +28,16 @@ public class UserController {
     public ResponseEntity<String> addNewPatient(@RequestBody @Valid PatientDetailsPojo patientDetails) {
         Integer userId = userService.addNewPatinet(patientDetails);
         if (userId == null) {
+            return ResponseEntity.badRequest().build();
+        } else {
+            URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userId).toUri();
+            return ResponseEntity.created(location).build();
+        }
+    }
+    @PostMapping("/signup/doctor")
+    public ResponseEntity<String> addNewDoctor(@RequestBody @Valid DoctorDetailsPojo doctorDetails){
+        Integer userId = userService.addNewDoctor(doctorDetails);
+        if(userId==null){
             return ResponseEntity.badRequest().build();
         } else {
             URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userId).toUri();

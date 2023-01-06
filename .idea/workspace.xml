@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Doctor Signup working">
-      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/exception/CustomizedResponseEntityHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/exception/ErrorDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/DoctorDetailsPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/PatientDetailsPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/BasicDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/Doctor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/Patient.java" afterDir="false" />
+    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Restructuring patient and doctor signup because of technical complexity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/BasicDetailsPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/BasicDetailsPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/DoctorPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/NewUserDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/PatientPojo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/RoleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/RoleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/RoleTypeValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/RoleTypeValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +218,8 @@
       <workItem from="1672815554535" duration="3426000" />
       <workItem from="1672902525282" duration="14711000" />
       <workItem from="1672998627550" duration="5223000" />
-      <workItem from="1673006309759" duration="6758000" />
+      <workItem from="1673006309759" duration="6934000" />
+      <workItem from="1673029746848" duration="1501000" />
     </task>
     <task id="LOCAL-00001" summary="Load Balancing in case of multiple instances of a service and API Gateway working">
       <created>1666342419631</created>
@@ -298,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672911024454</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Restructuring patient and doctor signup because of technical complexity">
+      <created>1673013424653</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673013424653</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +318,7 @@
     <MESSAGE value="Adding automatic Open-api documentation to microservices" />
     <MESSAGE value="Removed duplicate dependencies from AuthenticationService" />
     <MESSAGE value="Doctor Signup working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doctor Signup working" />
+    <MESSAGE value="Restructuring patient and doctor signup because of technical complexity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructuring patient and doctor signup because of technical complexity" />
   </component>
 </project>
