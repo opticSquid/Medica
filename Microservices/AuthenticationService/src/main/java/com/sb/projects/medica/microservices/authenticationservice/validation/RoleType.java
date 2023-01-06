@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = RoleTypeValidation.class)
 @Documented
 public @interface RoleType {
-    String message() default "Role preference must be USER or DOCTOR.";
+    String message() default "Role preference must be PATIENT or DOCTOR.";
 
     Class<?>[] groups() default {};
 

@@ -15,4 +15,3 @@ eureka:
 logging:
   level:
     web: error
-    org.springframework: debug

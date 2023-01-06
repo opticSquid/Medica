@@ -8,7 +8,7 @@ import java.util.List;
 public class RoleTypeValidation implements ConstraintValidator<RoleType, String> {
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        final List<String> roleType = Arrays.asList("USER", "DOCTOR");
+        final List<String> roleType = Arrays.asList("PATIENT", "DOCTOR");
         return roleType.contains(value);
     }
 }
