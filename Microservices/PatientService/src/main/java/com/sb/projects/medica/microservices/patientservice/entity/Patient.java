@@ -4,33 +4,31 @@ import com.sb.projects.medica.microservices.patientservice.pojo.PatientPojo;
 import lombok.*;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Patient {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer pId;
-    @NonNull
+    private Integer patId;
+    @NotNull
     private String name;
     @Email
     private String email;
-    @NonNull
+    @NotNull
     private String contactNo;
-      private Integer age;
+    private Integer age;
     private String gender;
     private String medicalConditions;
 
     public Patient(PatientPojo patient) {
+        this.patId = patient.getPatId();
         this.name = patient.getName();
         this.email = patient.getEmail();
         this.contactNo = patient.getContactNo();

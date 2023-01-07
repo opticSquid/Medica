@@ -15,7 +15,7 @@ public interface PatientRepo extends JpaRepository<Patient, Integer> {
     Optional<List<Patient>> findByName(String name);
     //TODO: Need to find how to use this query to further optimize update operations
     @Modifying
-    @Query("update Patient p set p.contactNo=?2, p.email=?3, p.name=?4 where p.pId=?1")
+    @Query("update Patient p set p.contactNo=?2, p.email=?3, p.name=?4 where p.patId=?1")
     void updatePatient(Integer pId, String contactNo, String email, String name);
 
     Optional<Patient> findByEmail(String email);

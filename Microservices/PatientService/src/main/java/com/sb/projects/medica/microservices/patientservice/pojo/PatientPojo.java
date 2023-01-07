@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -11,11 +12,13 @@ import javax.validation.constraints.Min;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PatientPojo {
-    @NonNull
+    @NotNull
+    private Integer patId;
+    @NotNull
     private String name;
     @Email
     private String email;
-    @NonNull
+    @NotNull
     private String contactNo;
     @Min(0)
     private Integer age;

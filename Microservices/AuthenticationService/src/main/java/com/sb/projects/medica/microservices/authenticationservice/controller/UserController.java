@@ -26,7 +26,7 @@ public class UserController {
 
     @PostMapping("/signup/patient")
     public ResponseEntity<String> addNewPatient(@RequestBody @Valid PatientDetailsPojo patientDetails) {
-        Integer userId = userService.addNewPatinet(patientDetails);
+        Integer userId = userService.addNewPatient(patientDetails);
         if (userId == null) {
             return ResponseEntity.badRequest().build();
         } else {

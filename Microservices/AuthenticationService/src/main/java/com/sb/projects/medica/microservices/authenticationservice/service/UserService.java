@@ -9,14 +9,19 @@ import com.sb.projects.medica.microservices.authenticationservice.pojo.finalclas
 import com.sb.projects.medica.microservices.authenticationservice.repository.UserRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import java.net.URI;
 
 @Service
 @Slf4j
 public class UserService {
     private final UserRepo userRepo;
+    private final RestTemplate restTemplate;
 
-    public UserService(UserRepo userRepo) {
+    public UserService(UserRepo userRepo, RestTemplate restTemplate) {
         this.userRepo = userRepo;
+        this.restTemplate = restTemplate;
     }
 
     //TODO: based on the userRole, call the specific microservice and add a new User
@@ -30,12 +35,13 @@ public class UserService {
         }
     }
 
-    public Integer addNewPatinet(PatientDetailsPojo patientDetails){
+    public Integer addNewPatient(PatientDetailsPojo patientDetails){
         BasicDetailsPojo basicPatientDetails = new BasicDetailsPojo(patientDetails.getName(), patientDetails.getEmail(),patientDetails.getContactNo(),patientDetails.getPassword(),"PATIENT");
        Integer userId =  addNewUser(basicPatientDetails);
         //This patient should be sent to patient microservice
         Patient patient = new Patient(patientDetails.getName(), patientDetails.getEmail(), patientDetails.getContactNo(), patientDetails.getAge(), patientDetails.getGender(), patientDetails.getMedicalConditions());
         patient.setPatId(userId);
+        URI location = restTemplate.postForLocation("http://PATIENT/patient/new",patient,Patient.class);
         return userId;
     }
     public Integer addNewDoctor(DoctorDetailsPojo doctorDetails){
