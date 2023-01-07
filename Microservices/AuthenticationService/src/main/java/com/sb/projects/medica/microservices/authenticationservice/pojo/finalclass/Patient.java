@@ -5,13 +5,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Getter
 @ToString
 @NoArgsConstructor
-public class Patient extends BasicDetails {
+public class Patient {
+    @Size(min = 5, message = "Name should be at least 5 characters long")
+    protected String name;
+    @Email
+    protected String email;
+    @Size(min = 10, message = "Contact number must be of 10 digits")
+    protected String contactNo;
     private Integer patId;
     @Min(0)
     private Integer age;
@@ -20,7 +28,9 @@ public class Patient extends BasicDetails {
     private String medicalConditions;
 
     public Patient(String name, String email, String contactNo, Integer age, String gender, String medicalConditions) {
-        super(name, email, contactNo);
+        this.name = name;
+        this.email = email;
+        this.contactNo = contactNo;
         this.age = age;
         this.gender = gender;
         this.medicalConditions = medicalConditions;

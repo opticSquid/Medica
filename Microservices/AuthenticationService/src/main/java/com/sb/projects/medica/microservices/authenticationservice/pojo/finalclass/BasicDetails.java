@@ -6,13 +6,11 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 @Getter
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
-public class BasicDetails {
+public abstract class BasicDetails {
     @Size(min = 5, message = "Name should be at least 5 characters long")
-    private String name;
+    protected String name;
     @Email
-    private String email;
+    protected String email;
     @Size(min = 10, message = "Contact number must be of 10 digits")
-    private String contactNo;
+    protected String contactNo;
 }

@@ -24,7 +24,6 @@ public class UserService {
         this.restTemplate = restTemplate;
     }
 
-    //TODO: based on the userRole, call the specific microservice and add a new User
     private Integer addNewUser(BasicDetailsPojo basicDetailsPojo) {
         try {
             User tobeSaved = new User(basicDetailsPojo);
@@ -35,17 +34,19 @@ public class UserService {
         }
     }
 
-    public Integer addNewPatient(PatientDetailsPojo patientDetails){
-        BasicDetailsPojo basicPatientDetails = new BasicDetailsPojo(patientDetails.getName(), patientDetails.getEmail(),patientDetails.getContactNo(),patientDetails.getPassword(),"PATIENT");
-       Integer userId =  addNewUser(basicPatientDetails);
+    public Integer addNewPatient(PatientDetailsPojo patientDetails) {
+        BasicDetailsPojo basicPatientDetails = new BasicDetailsPojo(patientDetails.getName(), patientDetails.getEmail(), patientDetails.getContactNo(), patientDetails.getPassword(), "PATIENT");
+        Integer userId = addNewUser(basicPatientDetails);
         //This patient should be sent to patient microservice
         Patient patient = new Patient(patientDetails.getName(), patientDetails.getEmail(), patientDetails.getContactNo(), patientDetails.getAge(), patientDetails.getGender(), patientDetails.getMedicalConditions());
         patient.setPatId(userId);
-        URI location = restTemplate.postForLocation("http://PATIENT/patient/new",patient,Patient.class);
+        log.debug("Patient: {}", patient);
+        restTemplate.postForLocation("http://PATIENT/patient/new", patient, Patient.class);
         return userId;
     }
-    public Integer addNewDoctor(DoctorDetailsPojo doctorDetails){
-        BasicDetailsPojo basicDoctorDetails  = new BasicDetailsPojo(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getPassword(), "DOCTOR");
+
+    public Integer addNewDoctor(DoctorDetailsPojo doctorDetails) {
+        BasicDetailsPojo basicDoctorDetails = new BasicDetailsPojo(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getPassword(), "DOCTOR");
         Integer userId = addNewUser(basicDoctorDetails);
         // This doctor should be sent to doctor microservice
         Doctor doctor = new Doctor(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getRegNo(), doctorDetails.getDegree(), doctorDetails.getSpecialization(), doctorDetails.getExperience());

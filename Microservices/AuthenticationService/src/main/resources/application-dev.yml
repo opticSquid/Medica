@@ -17,3 +17,4 @@ eureka:
 logging:
   level:
     web: debug
+    com.sb.projects.medica.microservices.authenticationservice: debug
