@@ -1,6 +1,7 @@
 package com.sb.projects.medica.microservices.doctorservice.service;
 
 import com.sb.projects.medica.microservices.doctorservice.entity.Doctor;
+import com.sb.projects.medica.microservices.doctorservice.pojo.DoctorPOJO;
 import com.sb.projects.medica.microservices.doctorservice.repository.DoctorRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -36,11 +37,12 @@ public class DoctorService {
         return doctorOptional.orElse(null);
     }
 
-    public Doctor addNewDoctor(Doctor doctor) {
+    public Doctor addNewDoctor(DoctorPOJO doctor) {
         log.info("Incoming doctor (to be added): " + doctor);
         try {
-            doctorRepo.save(doctor);
-            return doctor;
+            Doctor tobeSaved  = new Doctor(doctor);
+            doctorRepo.save(tobeSaved);
+            return tobeSaved;
         } catch (Exception e) {
             log.error("new doctor could not be added.. reason =>\n" + e);
             return null;

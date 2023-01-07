@@ -1,6 +1,7 @@
 package com.sb.projects.medica.microservices.doctorservice.controller;
 
 import com.sb.projects.medica.microservices.doctorservice.entity.Doctor;
+import com.sb.projects.medica.microservices.doctorservice.pojo.DoctorPOJO;
 import com.sb.projects.medica.microservices.doctorservice.service.DoctorService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -60,10 +61,10 @@ public class DoctorController {
     }
 
     @PostMapping(value = "/new")
-    public ResponseEntity<String> registerNewDoctor(@RequestBody @Valid Doctor doctor) {
+    public ResponseEntity<String> registerNewDoctor(@RequestBody @Valid DoctorPOJO doctor) {
         Doctor savedDoctor = doctorService.addNewDoctor(doctor);
         if (doctor != null) {
-            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(savedDoctor.getDId()).toUri();
+            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(savedDoctor.getDocId()).toUri();
             return ResponseEntity.created(location).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Object can not be processed");
@@ -74,7 +75,7 @@ public class DoctorController {
     public ResponseEntity<String> updateDoctorDetails(@PathVariable("id") Integer id, @RequestBody Doctor doctor) {
         Doctor updatedDoctor = doctorService.updateDoctor(id, doctor);
         if (updatedDoctor != null) {
-            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(updatedDoctor.getDId()).toUri();
+            URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(updatedDoctor.getDocId()).toUri();
             return ResponseEntity.status(204).location(location).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Update process on provided object can not be fulfilled");

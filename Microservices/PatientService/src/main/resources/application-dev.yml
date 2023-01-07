@@ -8,8 +8,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-    hibernate:
-      ddl-auto: create-drop
     show-sql: true
 server:
   port: 8001

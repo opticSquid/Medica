@@ -51,6 +51,8 @@ public class UserService {
         // This doctor should be sent to doctor microservice
         Doctor doctor = new Doctor(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getRegNo(), doctorDetails.getDegree(), doctorDetails.getSpecialization(), doctorDetails.getExperience());
         doctor.setDocId(userId);
+        log.debug("Doctor: {}",doctor);
+        restTemplate.postForLocation("http://DOCTOR/doctor/new",doctor,Doctor.class);
         return userId;
     }
 

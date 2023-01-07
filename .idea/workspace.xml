@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Create patient user call got 201 created from both authentication and patient microservice" />
+    <list default="true" id="786c01ba-3b20-4ba8-9eb2-cc87636d1ae3" name="Changes" comment="Adding run configurations to git">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/pojo/DoctorPOJO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-dev.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +62,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
@@ -169,6 +179,7 @@
       <workItem from="1673029746848" duration="3658000" />
       <workItem from="1673070025688" duration="8336000" />
       <workItem from="1673093622106" duration="1823000" />
+      <workItem from="1673112683087" duration="4867000" />
     </task>
     <task id="LOCAL-00001" summary="Load Balancing in case of multiple instances of a service and API Gateway working">
       <created>1666342419631</created>
@@ -268,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673095426419</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Adding run configurations to git">
+      <created>1673112778227</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673112778227</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +318,7 @@
     <MESSAGE value="Getting ready to call doctor or patient microservice from authentication service" />
     <MESSAGE value="Post request going to patient microservice but as the properties are not inherited so structures are becoming different so failing" />
     <MESSAGE value="Create patient user call got 201 created from both authentication and patient microservice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create patient user call got 201 created from both authentication and patient microservice" />
+    <MESSAGE value="Adding run configurations to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding run configurations to git" />
   </component>
 </project>
