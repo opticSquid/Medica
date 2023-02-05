@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Starting to change from sudo microservice to real microservice">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/TimingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/TimingController.java" afterDir="false" />
+    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Gateway Application Decoupled">
+      <change beforePath="$PROJECT_DIR$/EurekaServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +74,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
     <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="AuthenticationService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sb.projects.medica.microservices.authenticationservice.AuthenticationServiceApplication" />
@@ -154,6 +152,7 @@
       <workItem from="1674800452812" duration="1261000" />
       <workItem from="1674803287522" duration="98000" />
       <workItem from="1675595333372" duration="1977000" />
+      <workItem from="1675607539516" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to change from sudo microservice to real microservice">
       <created>1675599744917</created>
@@ -162,7 +161,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675599744918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Timing Controller commented temporarily">
+      <created>1675607772597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675607772597</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Gateway Application Decoupled">
+      <created>1675607793458</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675607793458</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +183,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting to change from sudo microservice to real microservice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting to change from sudo microservice to real microservice" />
+    <MESSAGE value="Timing Controller commented temporarily" />
+    <MESSAGE value="Gateway Application Decoupled" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gateway Application Decoupled" />
   </component>
 </project>
