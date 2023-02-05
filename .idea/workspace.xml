@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Patient Service, Doctor Service decoupled">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Decoupled all services now everything is plug and play">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/AppointmentService/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AppointmentService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AppointmentService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AppointmentService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AppointmentService/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,26 +50,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/soumalya/Development/CTS/Autum/my projects/Medica/Medica&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsDialog.application.dockerMachine&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;92ce20df48eb9de2f248d316df64a930&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/soumalya/Development/CTS/Autum/my projects/Medica/Medica",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsDialog.application.dockerMachine",
+    "spring.configuration.checksum": "92ce20df48eb9de2f248d316df64a930",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -80,7 +86,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+  <component name="RunManager" selected="Spring Boot.AuthenticationServiceApplication">
     <configuration name="AppointmentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="AppointmentService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sb.projects.medica.microservices.appointmentservice.AppointmentServiceApplication" />
@@ -88,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="AuthenticationService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sb.projects.medica.microservices.authenticationservice.AuthenticationServiceApplication" />
       <extension name="coverage">
@@ -159,7 +165,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Spring Boot.AuthenticationServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +184,7 @@
       <workItem from="1674800452812" duration="1261000" />
       <workItem from="1674803287522" duration="98000" />
       <workItem from="1675595333372" duration="1977000" />
-      <workItem from="1675607539516" duration="3040000" />
+      <workItem from="1675607539516" duration="4170000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to change from sudo microservice to real microservice">
       <created>1675599744917</created>
@@ -216,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675608888226</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Decoupled all services now everything is plug and play">
+      <created>1675610906211</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675610906211</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +240,7 @@
     <MESSAGE value="Gateway Application Decoupled" />
     <MESSAGE value="Eureka Server Decoupled" />
     <MESSAGE value="Patient Service, Doctor Service decoupled" />
-    <option name="LAST_COMMIT_MESSAGE" value="Patient Service, Doctor Service decoupled" />
+    <MESSAGE value="Decoupled all services now everything is plug and play" />
+    <option name="LAST_COMMIT_MESSAGE" value="Decoupled all services now everything is plug and play" />
   </component>
 </project>
