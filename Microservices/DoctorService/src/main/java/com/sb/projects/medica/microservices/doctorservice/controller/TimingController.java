@@ -16,9 +16,9 @@ public class TimingController {
     public TimingController(TimingService timingService) {
         this.timingService = timingService;
     }
-    @PostMapping("/new")
-    public RequestEntity<String> addTiming(@RequestBody TimingPOJO timing){
-
-    }
+//    @PostMapping("/new")
+//    public RequestEntity<String> addTiming(@RequestBody TimingPOJO timing){
+//
+//    }
 
 }
