@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Eureka Server Decoupled">
+    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Patient Service, Doctor Service decoupled">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AppointmentService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AppointmentService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Microservices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +179,7 @@
       <workItem from="1674800452812" duration="1261000" />
       <workItem from="1674803287522" duration="98000" />
       <workItem from="1675595333372" duration="1977000" />
-      <workItem from="1675607539516" duration="913000" />
+      <workItem from="1675607539516" duration="3040000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to change from sudo microservice to real microservice">
       <created>1675599744917</created>
@@ -202,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675608412999</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Patient Service, Doctor Service decoupled">
+      <created>1675608888226</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675608888226</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +227,7 @@
     <MESSAGE value="Timing Controller commented temporarily" />
     <MESSAGE value="Gateway Application Decoupled" />
     <MESSAGE value="Eureka Server Decoupled" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eureka Server Decoupled" />
+    <MESSAGE value="Patient Service, Doctor Service decoupled" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patient Service, Doctor Service decoupled" />
   </component>
 </project>
