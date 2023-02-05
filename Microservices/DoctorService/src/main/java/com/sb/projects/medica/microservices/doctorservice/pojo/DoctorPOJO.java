@@ -1,11 +1,13 @@
 package com.sb.projects.medica.microservices.doctorservice.pojo;
 
+import com.sb.projects.medica.microservices.doctorservice.entity.Timing;
 import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Getter
 @Setter
@@ -28,4 +30,5 @@ public class DoctorPOJO {
     @NotBlank
     private String specialization;
     private String experience;
+
 }

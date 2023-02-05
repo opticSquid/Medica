@@ -3,12 +3,12 @@ package com.sb.projects.medica.microservices.doctorservice.entity;
 import com.sb.projects.medica.microservices.doctorservice.pojo.DoctorPOJO;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Getter
@@ -33,6 +33,8 @@ public class Doctor {
     @NotBlank
     private String specialization;
     private String experience;
+    @OneToMany
+    private List<Timing> slots;
     public Doctor(DoctorPOJO doctor){
         this.docId = doctor.getDocId();
         this.name = doctor.getName();
