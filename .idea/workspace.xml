@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Decoupled all services now everything is plug and play">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/AppointmentService/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AppointmentService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AppointmentService/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-dev.yml" afterDir="false" />
-    </list>
+    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="All services except appointment service are startup tested added a data.sql in root directory to save the commands used everytime during project initialization" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +69,11 @@
 }]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -184,7 +180,7 @@
       <workItem from="1674800452812" duration="1261000" />
       <workItem from="1674803287522" duration="98000" />
       <workItem from="1675595333372" duration="1977000" />
-      <workItem from="1675607539516" duration="4170000" />
+      <workItem from="1675607539516" duration="4604000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to change from sudo microservice to real microservice">
       <created>1675599744917</created>
@@ -228,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675610906211</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="All services except appointment service are startup tested added a data.sql in root directory to save the commands used everytime during project initialization">
+      <created>1675612326631</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675612326631</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +244,7 @@
     <MESSAGE value="Eureka Server Decoupled" />
     <MESSAGE value="Patient Service, Doctor Service decoupled" />
     <MESSAGE value="Decoupled all services now everything is plug and play" />
-    <option name="LAST_COMMIT_MESSAGE" value="Decoupled all services now everything is plug and play" />
+    <MESSAGE value="All services except appointment service are startup tested added a data.sql in root directory to save the commands used everytime during project initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="All services except appointment service are startup tested added a data.sql in root directory to save the commands used everytime during project initialization" />
   </component>
 </project>
