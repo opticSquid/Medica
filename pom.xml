@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>EurekaServer</module>
-        <module>Gateway</module>
         <module>Microservices</module>
     </modules>
 
