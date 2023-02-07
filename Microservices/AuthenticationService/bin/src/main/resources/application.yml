@@ -1,8 +1,8 @@
 spring:
   profiles:
-    active: docker
+    active: dev
   application:
-    name: PATIENT
+    name: AUTHENTICATION
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:

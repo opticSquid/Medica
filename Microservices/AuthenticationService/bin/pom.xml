@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sb.projects.medica.microservices</groupId>
-    <artifactId>PatientService</artifactId>
+    <artifactId>AuthenticationService</artifactId>
     <version>0.0.2-SNAPSHOT</version>
-    <name>PatientService</name>
-    <description>PatientService</description>
+    <name>Authentication</name>
+    <description>Authentication</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -43,7 +43,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            </dependency>
+            <version>1.18.24</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -87,6 +88,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.7</version>
             </plugin>
         </plugins>
     </build>

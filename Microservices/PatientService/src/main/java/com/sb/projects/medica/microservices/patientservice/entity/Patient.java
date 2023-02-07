@@ -1,12 +1,17 @@
 package com.sb.projects.medica.microservices.patientservice.entity;
 
-import com.sb.projects.medica.microservices.patientservice.pojo.PatientPojo;
-import lombok.*;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+
+import com.sb.projects.medica.microservices.patientservice.pojo.PatientPojo;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter

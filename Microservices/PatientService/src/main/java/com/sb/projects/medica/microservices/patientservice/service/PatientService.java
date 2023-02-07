@@ -1,13 +1,15 @@
 package com.sb.projects.medica.microservices.patientservice.service;
 
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
 import com.sb.projects.medica.microservices.patientservice.entity.Patient;
 import com.sb.projects.medica.microservices.patientservice.pojo.PatientPojo;
 import com.sb.projects.medica.microservices.patientservice.repo.PatientRepo;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service

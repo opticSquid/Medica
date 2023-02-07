@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="All services except appointment service are startup tested added a data.sql in root directory to save the commands used everytime during project initialization" />
+    <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Merging main with dev">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/PatientService/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/901cd73a-2eaf-4ad9-bc1c-95cbfdbf3eea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/901cd73a-2eaf-4ad9-bc1c-95cbfdbf3eea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/901cd73a-2eaf-4ad9-bc1c-95cbfdbf3eea/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +68,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsDialog.application.dockerMachine&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;92ce20df48eb9de2f248d316df64a930&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;bd749891edb6f194fe127753f9516b3d&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -82,7 +92,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthenticationServiceApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml.mysql: Compose Deployment">
     <configuration name="AppointmentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="AppointmentService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sb.projects.medica.microservices.appointmentservice.AppointmentServiceApplication" />
@@ -158,8 +168,22 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.mysql: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mysql" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.mysql: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -181,6 +205,13 @@
       <workItem from="1674803287522" duration="98000" />
       <workItem from="1675595333372" duration="1977000" />
       <workItem from="1675607539516" duration="4604000" />
+      <workItem from="1675619583114" duration="1759000" />
+      <workItem from="1675622478009" duration="633000" />
+      <workItem from="1675623485004" duration="258000" />
+      <workItem from="1675625046654" duration="868000" />
+      <workItem from="1675626476349" duration="593000" />
+      <workItem from="1675627277071" duration="2838000" />
+      <workItem from="1675782291897" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to change from sudo microservice to real microservice">
       <created>1675599744917</created>
@@ -231,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675612326631</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Merging main with dev">
+      <created>1675613764576</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675613764576</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +294,7 @@
     <MESSAGE value="Patient Service, Doctor Service decoupled" />
     <MESSAGE value="Decoupled all services now everything is plug and play" />
     <MESSAGE value="All services except appointment service are startup tested added a data.sql in root directory to save the commands used everytime during project initialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="All services except appointment service are startup tested added a data.sql in root directory to save the commands used everytime during project initialization" />
+    <MESSAGE value="Merging main with dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging main with dev" />
   </component>
 </project>

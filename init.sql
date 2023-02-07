@@ -1,7 +1,7 @@
-create database patients;
-create database doctors;
-create database authentications;
-create database appointments;
+create database if not exists patients;
+create database if not exists doctors;
+create database if not exists authentications;
+create database if not exists appointments;
 GRANT ALL PRIVILEGES on patients.* to 'soumalya'@'%';
 GRANT ALL PRIVILEGES on doctors.* to 'soumalya'@'%';
 GRANT ALL PRIVILEGES on authentications.* to 'soumalya'@'%';

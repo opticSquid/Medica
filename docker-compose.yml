@@ -1,8 +1,31 @@
 version: '3.3'
 services:
-  mysql:
+  patient-service:
+    container_name: patient-service
+    build: ./Microservices/PatientService
+    depends_on:
+      - mysqldb
+      - service-discovery
+    networks:
+      - internal
+    restart: on-failure
+    ports:
+      - "8081:8081"
+
+  service-discovery:
+    container_name: service-discovery
+    build: ./EurekaServer
+    networks:
+      - internal
+    restart: on-failure
+    ports:
+      - "8761:8761"
+     
+  mysqldb:
     container_name: mysql
     image: mysql
+    build:
+      dockerfile: ./Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: PkNLm@#$2357
       MYSQL_USER: soumalya
@@ -10,12 +33,14 @@ services:
     ports:
       - "5000:3306"
     networks:
-      - mysql
+      - internal
+    volumes:
+      - mysql:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     restart: unless-stopped
 
 networks:
-  mysql:
+  internal:
     driver: bridge
-
 volumes:
   mysql:
