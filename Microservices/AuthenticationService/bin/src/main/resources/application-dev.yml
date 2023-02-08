@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:5000/authentications
+    username: soumalya
+    password: QsCAzX@#$%24680
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+server:
+  port: 8003
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+logging:
+  level:
+    web: debug
+    com.sb.projects.medica.microservices.authenticationservice: debug

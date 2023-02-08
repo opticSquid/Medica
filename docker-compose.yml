@@ -1,21 +1,85 @@
 version: '3.3'
 services:
-  mysql:
+  auth-service:
+    container_name: auth-service
+    build: ./Microservices/AuthenticationService
+    depends_on:
+      - mysqldb
+      - service-discovery
+    networks:
+      - internal
+    restart: on-failure
+    
+#  appointment-service:
+#    container_name: appointment-servie
+#    build: ./Microservices/AppointmentServie
+#    depends_on:
+#      - mysqldb
+#      - service-discovery
+#    networks:
+#      - internal
+#    restart: on-failure
+    
+  doctor-service:
+    container_name: doctor-service
+    build: ./Microservices/DoctorService
+    depends_on:
+      - mysqldb
+      - service-discovery
+    networks:
+      - internal
+    restart: on-failure  
+    
+  patient-service:
+    container_name: patient-service
+    build: ./Microservices/PatientService
+    depends_on:
+      - mysqldb
+      - service-discovery
+    networks:
+      - internal
+    restart: on-failure
+
+  app-gateway:
+    container_name: app-gateway
+    build: ./Gateway
+    depends_on:
+      - service-discovery
+    networks:
+      - internal
+    restart: on-failure
+    ports:
+      - "8080:8088"
+
+  service-discovery:
+    container_name: service-discovery
+    build: ./EurekaServer
+    networks:
+      - internal
+    restart: on-failure
+     
+  mysqldb:
     container_name: mysql
     image: mysql
+    build:
+      dockerfile: ./Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: PkNLm@#$2357
       MYSQL_USER: soumalya
       MYSQL_PASSWORD: QsCAzX@#$%24680
     ports:
+      # for dev only map it to host machine
+      # for prod remove the whole port config from here so that it is not accessible from else where
       - "5000:3306"
     networks:
-      - mysql
+      - internal
+    volumes:
+      - mysql:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     restart: unless-stopped
 
 networks:
-  mysql:
+  internal:
     driver: bridge
-
 volumes:
   mysql:
