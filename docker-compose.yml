@@ -30,6 +30,17 @@ services:
       - internal
     restart: on-failure
 
+  app-gateway:
+    container_name: app-gateway
+    build: ./Gateway
+    depends_on:
+      - service-discovery
+    networks:
+      - internal
+    restart: on-failure
+    ports:
+      - "8080:8088"
+
   service-discovery:
     container_name: service-discovery
     build: ./EurekaServer

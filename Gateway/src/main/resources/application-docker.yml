@@ -1,0 +1,9 @@
+logging:
+  level:
+    web: debug
+server:
+  port: 8088
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-discovery:8761/eureka
