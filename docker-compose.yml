@@ -9,6 +9,17 @@ services:
     networks:
       - internal
     restart: on-failure
+    
+  doctor-service:
+    container_name: doctor-service
+    build: ./Microservices/DoctorService
+    depends_on:
+      - mysqldb
+      - service-discovery
+    networks:
+      - internal
+    restart: on-failure  
+    
   patient-service:
     container_name: patient-service
     build: ./Microservices/PatientService
