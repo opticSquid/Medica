@@ -10,6 +10,16 @@ services:
       - internal
     restart: on-failure
     
+#  appointment-service:
+#    container_name: appointment-servie
+#    build: ./Microservices/AppointmentServie
+#    depends_on:
+#      - mysqldb
+#      - service-discovery
+#    networks:
+#      - internal
+#    restart: on-failure
+    
   doctor-service:
     container_name: doctor-service
     build: ./Microservices/DoctorService
