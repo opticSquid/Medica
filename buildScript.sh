@@ -30,7 +30,7 @@ echo "Building executables completed"
 echo "Now attempting to start docker desktop"
 systemctl --user start docker-desktop
 echo "waiting for docker desktop services to start properly -  waiting 5 mins"
-# sleep 300
+sleep 300
 pwd
 echo "Docker Desktop Successfully started"
 echo "Attempting to start essential container services"
