@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Merging main with dev">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/PatientService/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/901cd73a-2eaf-4ad9-bc1c-95cbfdbf3eea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/901cd73a-2eaf-4ad9-bc1c-95cbfdbf3eea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/901cd73a-2eaf-4ad9-bc1c-95cbfdbf3eea/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/PatientService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,6 +204,7 @@
       <workItem from="1675626476349" duration="593000" />
       <workItem from="1675627277071" duration="2838000" />
       <workItem from="1675782291897" duration="272000" />
+      <workItem from="1675841876031" duration="1257000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to change from sudo microservice to real microservice">
       <created>1675599744917</created>
