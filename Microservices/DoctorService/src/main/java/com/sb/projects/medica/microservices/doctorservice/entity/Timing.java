@@ -18,7 +18,6 @@ public class Timing {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer slotId;
     @ManyToOne
-    @JoinColumn
     private Doctor doctor;
     private String weekDay;
     private LocalTime startTime;

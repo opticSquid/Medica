@@ -36,7 +36,7 @@ public class Doctor {
     @OneToMany
     private List<Timing> slots;
     public Doctor(DoctorPOJO doctor){
-        this.docId = doctor.getDocId();
+//        this.docId = doctor.getDocId();
         this.name = doctor.getName();
         this.email = doctor.getEmail();
         this.contactNo = doctor.getContactNo();
