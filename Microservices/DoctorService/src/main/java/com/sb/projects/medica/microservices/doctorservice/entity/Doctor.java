@@ -8,17 +8,17 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
-@Setter
 @ToString
-@AllArgsConstructor
 @NoArgsConstructor
 public class Doctor {
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @NotNull
     private Integer docId;
     @Size(min = 6, message = "Name should be at least 6 characters long")
     private String name;
@@ -33,10 +33,47 @@ public class Doctor {
     @NotBlank
     private String specialization;
     private String experience;
-    @OneToMany
-    private List<Timing> slots;
-    public Doctor(DoctorPOJO doctor){
-//        this.docId = doctor.getDocId();
+    @OneToMany(mappedBy = "doctor")
+    private List<Slot> slots = new ArrayList<>();
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
+    }
+
+    public void setRegNo(String regNo) {
+        this.regNo = regNo;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
+
+    public void addSlot(Slot slot)
+    {
+        slots.add(slot);
+    }
+
+    public void removeSlot(Slot slot)
+    {
+        slots.remove(slot);
+    }
+        public Doctor(DoctorPOJO doctor){
         this.name = doctor.getName();
         this.email = doctor.getEmail();
         this.contactNo = doctor.getContactNo();

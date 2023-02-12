@@ -1,4 +1,4 @@
-package com.sb.projects.medica.microservices.doctorservice.pojo;
+package com.sb.projects.medica.microservices.authenticationservice.pojo.finalclass;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,16 +7,16 @@ import lombok.Setter;
 
 import java.time.LocalTime;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TimingPOJO {
-    // We will be taking only docId and fetching the other doctor details internally
-    // to reduce the amount of data transfer
-    private Integer docId;
+public class Slot {
+    private Integer slotId;
+
     private String weekDay;
     private LocalTime startTime;
     private LocalTime endTime;
-    private String slotTime="15";
+    private String slotTime;
 }

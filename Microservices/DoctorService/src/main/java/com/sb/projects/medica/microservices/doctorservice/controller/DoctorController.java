@@ -64,6 +64,7 @@ public class DoctorController {
     public ResponseEntity<String> registerNewDoctor(@RequestBody @Valid DoctorPOJO doctor) {
         Doctor savedDoctor = doctorService.addNewDoctor(doctor);
         if (doctor != null) {
+            log.debug("DOCTOR SAVED: {}",savedDoctor);
             URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(savedDoctor.getDocId()).toUri();
             return ResponseEntity.created(location).build();
         } else {

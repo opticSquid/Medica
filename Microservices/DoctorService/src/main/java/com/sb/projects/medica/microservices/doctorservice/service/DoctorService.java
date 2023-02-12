@@ -2,6 +2,7 @@ package com.sb.projects.medica.microservices.doctorservice.service;
 
 import com.sb.projects.medica.microservices.doctorservice.entity.Doctor;
 import com.sb.projects.medica.microservices.doctorservice.pojo.DoctorPOJO;
+import com.sb.projects.medica.microservices.doctorservice.pojo.SlotPOJO;
 import com.sb.projects.medica.microservices.doctorservice.repository.DoctorRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,9 +14,11 @@ import java.util.Optional;
 @Slf4j
 public class DoctorService {
     private final DoctorRepo doctorRepo;
+    private final SlotService slotService;
 
-    public DoctorService(DoctorRepo doctorRepo) {
+    public DoctorService(DoctorRepo doctorRepo, SlotService slotService) {
         this.doctorRepo = doctorRepo;
+        this.slotService = slotService;
     }
 
     public Iterable<Doctor> getAllDoctors() {
@@ -37,12 +40,18 @@ public class DoctorService {
         return doctorOptional.orElse(null);
     }
 
-    public Doctor addNewDoctor(DoctorPOJO doctor) {
-        log.info("Incoming doctor (to be added): " + doctor);
+    public Doctor addNewDoctor(DoctorPOJO incomingDoctor) {
+        log.info("Incoming doctor (to be added): " + incomingDoctor);
         try {
-            Doctor tobeSaved  = new Doctor(doctor);
-            doctorRepo.save(tobeSaved);
-            return tobeSaved;
+            Doctor doctor = new Doctor(incomingDoctor);
+            doctor = doctorRepo.save(doctor);
+            log.debug("primary save step succeeded");
+            for (SlotPOJO s: incomingDoctor.getSlots()
+                 ) {
+                s.setDoctor(doctor);
+            }
+            slotService.addTiming(incomingDoctor.getSlots());
+            return doctor;
         } catch (Exception e) {
             log.error("new doctor could not be added.. reason =>\n" + e);
             return null;

@@ -7,6 +7,7 @@ import lombok.ToString;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Getter
 @ToString
@@ -27,7 +28,9 @@ public class Doctor {
     private String specialization;
     private String experience;
 
-    public Doctor(String name, String email, String contactNo, String regNo, String degree, String specialization, String experience) {
+    private List<Slot> slots;
+
+    public Doctor(String name, String email, String contactNo, String regNo, String degree, String specialization, String experience, List<Slot> slots) {
         this.name = name;
         this.email = email;
         this.contactNo = contactNo;
@@ -35,6 +38,7 @@ public class Doctor {
         this.degree = degree;
         this.specialization = specialization;
         this.experience = experience;
+        this.slots = slots;
     }
 
     public void setDocId(@NotNull Integer docId) {

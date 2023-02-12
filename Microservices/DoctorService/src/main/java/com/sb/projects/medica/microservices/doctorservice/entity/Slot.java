@@ -1,5 +1,6 @@
 package com.sb.projects.medica.microservices.doctorservice.entity;
 
+import com.sb.projects.medica.microservices.doctorservice.pojo.SlotPOJO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,9 +14,9 @@ import java.time.LocalTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Timing {
+public class Slot {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer slotId;
     @ManyToOne
     private Doctor doctor;
@@ -23,4 +24,13 @@ public class Timing {
     private LocalTime startTime;
     private LocalTime endTime;
     private String slotTime;
+
+    public Slot(SlotPOJO slot)
+    {
+        this.doctor = slot.getDoctor();
+        this.weekDay = slot.getWeekDay();
+        this.startTime = slot.getStartTime();
+        this.endTime = slot.getEndTime();
+        this.slotTime = slot.getSlotTime();
+    }
 }

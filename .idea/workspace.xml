@@ -5,7 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d3b7a80-bd05-4662-8865-31702c397e4d" name="Changes" comment="Merging main with dev">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/AuthenticationServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/config/RestConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/exception/CustomizedResponseEntityHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/exception/ErrorDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/BasicDetailsPojo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/DoctorDetailsPojo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/PatientDetailsPojo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/BasicDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/Doctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/Patient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/repository/UserRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/GenderType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/GenderTypeValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/RoleType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/java/com/sb/projects/medica/microservices/authenticationservice/validation/RoleTypeValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/resources/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/bin/src/test/java/com/sb/projects/medica/microservices/authenticationservice/AuthenticationServiceApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/DoctorDetailsPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/DoctorDetailsPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/pojo/finalclass/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/java/com/sb/projects/medica/microservices/authenticationservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/AuthenticationService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/TimingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/controller/SlotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Timing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/entity/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/pojo/DoctorPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/pojo/DoctorPOJO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/pojo/TimingPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/pojo/SlotPOJO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/repository/TimingRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/repository/SlotRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/service/TimingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/java/com/sb/projects/medica/microservices/doctorservice/service/SlotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Microservices/DoctorService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Microservices/DoctorService/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +122,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sb.projects.medica.microservices.authenticationservice.pojo.finalclass" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -84,7 +133,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.mysql: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.AuthenticationServiceApplication">
     <configuration name="AppointmentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="AppointmentService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sb.projects.medica.microservices.appointmentservice.AppointmentServiceApplication" />
@@ -205,6 +254,8 @@
       <workItem from="1675627277071" duration="2838000" />
       <workItem from="1675782291897" duration="272000" />
       <workItem from="1675841876031" duration="1257000" />
+      <workItem from="1676201131744" duration="449000" />
+      <workItem from="1676203795136" duration="11011000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to change from sudo microservice to real microservice">
       <created>1675599744917</created>

@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
@@ -31,5 +33,5 @@ public class DoctorPOJO {
 	@NotBlank
 	private String specialization;
 	private String experience;
-//	private List<Timing> slots;
+	private List<SlotPOJO> slots;
 }
