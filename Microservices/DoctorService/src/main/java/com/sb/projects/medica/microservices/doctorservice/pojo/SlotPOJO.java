@@ -13,11 +13,26 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SlotPOJO {
-    // We will be taking only docId and fetching the other doctor details internally
+    //TODO:: We will be taking only docId and fetching the other doctor details internally
     // to reduce the amount of data transfer
     private Doctor doctor;
     private String weekDay;
     private LocalTime startTime;
     private LocalTime endTime;
-    private String slotTime="15";
+    private LocalTime slotTime;
+
+    public SlotPOJO(String weekDay, LocalTime startTime, LocalTime endTime)
+    {
+        this.weekDay = weekDay;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.slotTime = null;
+    }
+    public SlotPOJO(String weekDay, LocalTime startTime, LocalTime endTime, LocalTime slotTime)
+    {
+        this.weekDay = weekDay;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.slotTime = slotTime;
+    }
 }

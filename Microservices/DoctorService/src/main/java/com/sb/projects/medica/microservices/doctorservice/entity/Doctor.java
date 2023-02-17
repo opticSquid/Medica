@@ -19,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Doctor {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.AUTO)
 //    @NotNull
     private Integer docId;
     @Size(min = 6, message = "Name should be at least 6 characters long")
@@ -39,6 +39,7 @@ public class Doctor {
     private final List<Slot> slots = new ArrayList<>();
 
     public Doctor(DoctorPOJO doctor) {
+        this.docId = doctor.getDocId();
         this.name = doctor.getName();
         this.email = doctor.getEmail();
         this.contactNo = doctor.getContactNo();

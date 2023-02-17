@@ -19,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DoctorPOJO {
-//	private Integer docId;
+	private Integer docId;
 	@Size(min = 6, message = "Name should be at least 6 characters long")
 	private String name;
 	@Email
