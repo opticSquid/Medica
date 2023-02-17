@@ -1,7 +1,9 @@
 package com.sb.projects.medica.microservices.doctorservice.entity;
 
 import com.sb.projects.medica.microservices.doctorservice.pojo.DoctorPOJO;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -34,7 +36,28 @@ public class Doctor {
     private String specialization;
     private String experience;
     @OneToMany(mappedBy = "doctor")
-    private List<Slot> slots = new ArrayList<>();
+    private final List<Slot> slots = new ArrayList<>();
+
+    public Doctor(DoctorPOJO doctor) {
+        this.name = doctor.getName();
+        this.email = doctor.getEmail();
+        this.contactNo = doctor.getContactNo();
+        this.regNo = doctor.getContactNo();
+        this.degree = doctor.getDegree();
+        this.specialization = doctor.getSpecialization();
+        this.experience = doctor.getExperience();
+    }
+
+    public Doctor(Integer docId, String name, String email, String contactNo, String regNo, String degree, String specialization, String experience) {
+        this.docId = docId;
+        this.name = name;
+        this.email = email;
+        this.contactNo = contactNo;
+        this.regNo = regNo;
+        this.degree = degree;
+        this.specialization = specialization;
+        this.experience = experience;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -64,22 +87,12 @@ public class Doctor {
         this.experience = experience;
     }
 
-    public void addSlot(Slot slot)
-    {
+    public void addSlot(Slot slot) {
         slots.add(slot);
     }
 
-    public void removeSlot(Slot slot)
-    {
+    public void removeSlot(Slot slot) {
         slots.remove(slot);
     }
-        public Doctor(DoctorPOJO doctor){
-        this.name = doctor.getName();
-        this.email = doctor.getEmail();
-        this.contactNo = doctor.getContactNo();
-        this.regNo = doctor.getContactNo();
-        this.degree = doctor.getDegree();
-        this.specialization = doctor.getSpecialization();
-        this.experience = doctor.getExperience();
-    }
+
 }

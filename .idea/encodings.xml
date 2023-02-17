@@ -13,9 +13,5 @@
     <file url="file://$PROJECT_DIR$/Microservices/DoctorService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Microservices/PatientService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Microservices/PatientService/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Microservices/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Microservices/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>

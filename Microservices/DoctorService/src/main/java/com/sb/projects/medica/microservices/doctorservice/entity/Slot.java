@@ -1,5 +1,6 @@
 package com.sb.projects.medica.microservices.doctorservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sb.projects.medica.microservices.doctorservice.pojo.SlotPOJO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +20,7 @@ public class Slot {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer slotId;
     @ManyToOne
+    @JsonIgnore
     private Doctor doctor;
     private String weekDay;
     private LocalTime startTime;
@@ -32,5 +34,12 @@ public class Slot {
         this.startTime = slot.getStartTime();
         this.endTime = slot.getEndTime();
         this.slotTime = slot.getSlotTime();
+    }
+    public Slot(Integer slotId, String weekDay, LocalTime startTime, LocalTime endTime)
+    {
+        this.slotId = slotId;
+         this.weekDay = weekDay;
+         this.startTime = startTime;
+         this.endTime = endTime;
     }
 }
