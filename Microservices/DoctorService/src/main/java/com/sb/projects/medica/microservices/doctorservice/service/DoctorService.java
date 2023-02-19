@@ -8,6 +8,7 @@ import com.sb.projects.medica.microservices.doctorservice.repository.DoctorRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +41,7 @@ public class DoctorService {
         Optional<List<Doctor>> doctorOptional = doctorRepo.findBySpecialization(specialization);
         return doctorOptional.orElse(null);
     }
-
+    @Transactional
     public Doctor addNewDoctor(DoctorPOJO incomingDoctor) {
         log.info("Incoming doctor (to be added): " + incomingDoctor);
         try {
@@ -62,6 +63,7 @@ public class DoctorService {
     //TODO: Code can further be optimized by taking only id and only the field to update
     //TODO: update can be overloaded with one update just updating single field using id only
     //TODO: Another update updating the whole record
+    @Transactional
     public Doctor updateDoctor(Doctor doctor) {
         log.info("Incoming doctor (to be updated): " + doctor);
         Doctor existingDoctor = getDoctorByID(doctor.getDocId());
@@ -78,11 +80,18 @@ public class DoctorService {
         }
     }
 
+    @Transactional
     public Boolean deleteDoctor(Integer id) {
         log.info("Incoming doctor id (to be deleted): " + id);
         try {
-            doctorRepo.deleteById(id);
-            return true;
+            Doctor existingDoctor = getDoctorByID(id);
+            if(existingDoctor!=null)
+            {
+                slotService.deleteAllSlotsOfDoctor(existingDoctor);
+                doctorRepo.deleteById(id);
+                return true;
+            }
+            return false;
         } catch (Exception e) {
             log.error("Doctor could not be deleted.. reason => " + e);
             return false;

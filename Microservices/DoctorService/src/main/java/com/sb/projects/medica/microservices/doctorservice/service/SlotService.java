@@ -1,5 +1,6 @@
 package com.sb.projects.medica.microservices.doctorservice.service;
 
+import com.sb.projects.medica.microservices.doctorservice.entity.Doctor;
 import com.sb.projects.medica.microservices.doctorservice.entity.Slot;
 import com.sb.projects.medica.microservices.doctorservice.pojo.SlotPOJO;
 import com.sb.projects.medica.microservices.doctorservice.repository.SlotRepo;
@@ -29,6 +30,15 @@ public class SlotService {
         for(Slot s: slots)
         {
             slotrepo.save(s);
+        }
+    }
+    public void deleteAllSlotsOfDoctor(Doctor doctor)
+    {
+        try{
+            slotrepo.deleteByDoctor(doctor);
+        } catch (Exception e)
+        {
+            log.debug("Could not delete slots for Doctor: {}\n Reason: {}",doctor,e);
         }
     }
 }
