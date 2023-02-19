@@ -38,7 +38,7 @@ public class PatientService {
         Optional<Patient> patientOptional = patientRepo.findByEmail(email);
         return patientOptional.orElse(null);
     }
-
+    //TODO:: Tomorrow add Prescription
     public Patient addNewPatient(PatientPojo patient) {
         log.info("Incoming patient (to be added): " + patient);
         try {
@@ -58,7 +58,8 @@ public class PatientService {
         log.info("Incoming patient (to be updated): " + patient);
         Patient existingPatient = getPatientById(id);
         if (existingPatient != null) {
-            Patient tobeSaved = new Patient(id, patient.getName(), patient.getEmail(), patient.getContactNo(), patient.getAge(), patient.getGender(), patient.getMedicalConditions());
+            patient.setPatId(existingPatient.getPatId());
+            Patient tobeSaved = new Patient(patient);
             patientRepo.save(tobeSaved);
             return tobeSaved;
         } else {

@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
@@ -27,6 +29,7 @@ public class PatientPojo {
     @Min(0)
     private Integer age;
     private String gender;
-    private String medicalConditions;
+    private List<String> medicalConditions;
+    private List<PrescriptionPOJO> prescriptionPOJOS;
 
 }
