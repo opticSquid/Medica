@@ -87,7 +87,11 @@ public class Doctor {
     public void setExperience(String experience) {
         this.experience = experience;
     }
-
+    public void setSLots(List<Slot> slots)
+    {
+        this.slots.clear();
+        this.slots.addAll(slots);
+    }
     public void addSlot(Slot slot) {
         slots.add(slot);
     }

@@ -1,6 +1,7 @@
 package com.sb.projects.medica.microservices.doctorservice.service;
 
 import com.sb.projects.medica.microservices.doctorservice.entity.Doctor;
+import com.sb.projects.medica.microservices.doctorservice.entity.Slot;
 import com.sb.projects.medica.microservices.doctorservice.pojo.DoctorPOJO;
 import com.sb.projects.medica.microservices.doctorservice.pojo.SlotPOJO;
 import com.sb.projects.medica.microservices.doctorservice.repository.DoctorRepo;
@@ -46,8 +47,8 @@ public class DoctorService {
             Doctor doctor = new Doctor(incomingDoctor);
             doctor = doctorRepo.save(doctor);
             log.debug("primary save step succeeded");
-            for (SlotPOJO s: incomingDoctor.getSlots()
-                 ) {
+            for (SlotPOJO s : incomingDoctor.getSlots()
+            ) {
                 s.setDoctor(doctor);
             }
             slotService.addTiming(incomingDoctor.getSlots());
@@ -61,11 +62,16 @@ public class DoctorService {
     //TODO: Code can further be optimized by taking only id and only the field to update
     //TODO: update can be overloaded with one update just updating single field using id only
     //TODO: Another update updating the whole record
-    public Doctor updateDoctor(Integer id, Doctor doctor) {
+    public Doctor updateDoctor(Doctor doctor) {
         log.info("Incoming doctor (to be updated): " + doctor);
-        Doctor existingDoctor = getDoctorByID(id);
+        Doctor existingDoctor = getDoctorByID(doctor.getDocId());
         if (existingDoctor != null) {
-            return doctorRepo.save(doctor);
+            existingDoctor = new Doctor(doctor.getDocId(), doctor.getName(), doctor.getEmail(), doctor.getContactNo(), doctor.getRegNo(), doctor.getDegree(), doctor.getSpecialization(), doctor.getExperience());
+            for (Slot s : doctor.getSlots()) {
+                s.setDoctor(existingDoctor);
+            }
+            slotService.updateTiming(doctor.getSlots());
+            return doctorRepo.save(existingDoctor);
         } else {
             log.error("Doctor could not be updated, because requested doctor id could not be found");
             return null;
