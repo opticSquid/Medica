@@ -33,7 +33,7 @@ public class Patient {
     private Integer age;
     private String gender;
     @ElementCollection
-    @CollectionTable(name="medical_conditions", joinColumns = @JoinColumn(name="patId"))
+    @CollectionTable(name = "medical_conditions", joinColumns = @JoinColumn(name = "patId"))
     private List<String> medicalConditions = new ArrayList<>();
     @OneToMany(mappedBy = "patient")
     private List<Prescription> prescriptionList = new ArrayList<>();
@@ -46,5 +46,15 @@ public class Patient {
         this.age = patient.getAge();
         this.gender = patient.getGender();
         this.medicalConditions = patient.getMedicalConditions();
+    }
+
+    public Patient(Integer patId, String name, String email, String contactNo, Integer age, String gender, List<String> medicalConditions) {
+        this.patId = patId;
+        this.name = name;
+        this.email = email;
+        this.contactNo = contactNo;
+        this.age = age;
+        this.gender = gender;
+        this.medicalConditions = medicalConditions;
     }
 }
