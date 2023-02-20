@@ -1,7 +1,6 @@
 package com.sb.projects.medica.microservices.patientservice.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
@@ -12,6 +11,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -30,7 +32,11 @@ public class Patient {
     private String contactNo;
     private Integer age;
     private String gender;
-    private String medicalConditions;
+    @ElementCollection
+    @CollectionTable(name="medical_conditions", joinColumns = @JoinColumn(name="patId"))
+    private List<String> medicalConditions = new ArrayList<>();
+    @OneToMany(mappedBy = "patient")
+    private List<Prescription> prescriptionList = new ArrayList<>();
 
     public Patient(PatientPojo patient) {
         this.patId = patient.getPatId();
