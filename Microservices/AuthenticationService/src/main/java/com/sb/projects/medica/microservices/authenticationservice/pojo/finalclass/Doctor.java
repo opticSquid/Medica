@@ -1,5 +1,6 @@
 package com.sb.projects.medica.microservices.authenticationservice.pojo.finalclass;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -12,6 +13,7 @@ import java.util.List;
 @Getter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 public class Doctor {
     @Size(min = 5, message = "Name should be at least 5 characters long")
     protected String name;
@@ -30,6 +32,16 @@ public class Doctor {
 
     private List<Slot> slots;
 
+    public Doctor(String name, String email, String contactNo, String regNo, String degree, String specialization, String experience) {
+        this.name = name;
+        this.email = email;
+        this.contactNo = contactNo;
+        this.regNo = regNo;
+        this.degree = degree;
+        this.specialization = specialization;
+        this.experience = experience;
+    }
+    // If slot details are provided by the user
     public Doctor(String name, String email, String contactNo, String regNo, String degree, String specialization, String experience, List<Slot> slots) {
         this.name = name;
         this.email = email;
@@ -44,4 +56,5 @@ public class Doctor {
     public void setDocId(@NotNull Integer docId) {
         this.docId = docId;
     }
+
 }

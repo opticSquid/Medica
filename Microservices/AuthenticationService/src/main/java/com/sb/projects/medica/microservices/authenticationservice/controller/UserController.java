@@ -4,11 +4,9 @@ import com.sb.projects.medica.microservices.authenticationservice.pojo.DoctorDet
 import com.sb.projects.medica.microservices.authenticationservice.pojo.PatientDetailsPojo;
 import com.sb.projects.medica.microservices.authenticationservice.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
@@ -34,14 +32,24 @@ public class UserController {
             return ResponseEntity.created(location).build();
         }
     }
+
     @PostMapping("/signup/doctor")
-    public ResponseEntity<String> addNewDoctor(@RequestBody @Valid DoctorDetailsPojo doctorDetails){
+    public ResponseEntity<String> addNewDoctor(@RequestBody @Valid DoctorDetailsPojo doctorDetails) {
         Integer userId = userService.addNewDoctor(doctorDetails);
-        if(userId==null){
+        if (userId == null) {
             return ResponseEntity.badRequest().build();
         } else {
             URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userId).toUri();
             return ResponseEntity.created(location).build();
+        }
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable("id") Integer id) {
+        if (Boolean.TRUE.equals(userService.deleteUser(id))) {
+            return ResponseEntity.status(HttpStatus.OK).body("user deleted");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("user could not be deleted, check for existing associations of this object with other records in database");
         }
     }
 }

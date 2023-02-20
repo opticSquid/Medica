@@ -50,14 +50,26 @@ public class DoctorController {
     @GetMapping("/name/{name}")
     public ResponseEntity<Iterable<Doctor>> getDoctorByName(@PathVariable("name") String name) {
         List<Doctor> doctor = doctorService.getDoctorsByName(name);
-        return getIterableResponseEntity(doctor);
+        if(doctor.isEmpty())
+        {
+            return ResponseEntity.notFound().build();
+        } else {
+            return new ResponseEntity<>(doctor,HttpStatus.OK);
+
+        }
     }
 
 
     @GetMapping("/specialization/{specialization}")
     public ResponseEntity<Iterable<Doctor>> getDoctorBySpecialization(@PathVariable("specialization") String specialization) {
         List<Doctor> doctor = doctorService.getDoctorsBySpecialization(specialization);
-        return getIterableResponseEntity(doctor);
+        if(doctor.isEmpty())
+        {
+            return ResponseEntity.notFound().build();
+        } else {
+            return new ResponseEntity<>(doctor,HttpStatus.OK);
+
+        }
     }
 
     @PostMapping(value = "/new")

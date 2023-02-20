@@ -6,7 +6,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.xml.stream.events.Comment;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -26,12 +25,14 @@ public class Prescription {
     @JsonIgnore
     Patient patient;
     @NotNull
+    Integer docId;
+    @NotNull
     LocalDateTime time;
     @ElementCollection
-    @CollectionTable(name="medicines", joinColumns = @JoinColumn(name="prescId"))
+    @CollectionTable(name = "medicines", joinColumns = @JoinColumn(name = "prescId"))
     List<String> medicines = new ArrayList<>();
     @ElementCollection
-    @CollectionTable(name="tests", joinColumns = @JoinColumn(name="prescId"))
+    @CollectionTable(name = "tests", joinColumns = @JoinColumn(name = "prescId"))
     List<String> tests = new ArrayList<>();
     String comments;
     LocalDate nextAppointmentDate;

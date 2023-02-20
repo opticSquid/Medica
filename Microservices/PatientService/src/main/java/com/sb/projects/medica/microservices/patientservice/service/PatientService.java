@@ -44,6 +44,7 @@ public class PatientService {
         Optional<Patient> patientOptional = patientRepo.findByEmail(email);
         return patientOptional.orElse(null);
     }
+
     @Transactional
     public Patient addNewPatient(PatientPojo incomingPatient) {
         log.info("Incoming patient (to be added): " + incomingPatient);
@@ -51,11 +52,12 @@ public class PatientService {
             Patient patient = new Patient(incomingPatient);
             patient = patientRepo.save(patient);
             log.debug("Primary save step completed");
-            for(PrescriptionPOJO p: incomingPatient.getPrescriptions())
-            {
-                p.setPatient(patient);
+            if (incomingPatient.getPrescriptions() != null) {
+                for (PrescriptionPOJO p : incomingPatient.getPrescriptions()) {
+                    p.setPatient(patient);
+                }
+                presService.addNewPrescription(incomingPatient.getPrescriptions());
             }
-            presService.addNewPrescription(incomingPatient.getPrescriptions());
             return patient;
         } catch (Exception e) {
             log.error("new Patient could not be added.. reason =>\n" + e);
@@ -71,29 +73,34 @@ public class PatientService {
         log.info("Incoming patient (to be updated): " + patient);
         Patient existingPatient = getPatientById(patient.getPatId());
         if (existingPatient != null) {
-            existingPatient = new Patient(patient.getPatId(),patient.getName(),patient.getEmail(),patient.getContactNo(),patient.getAge(),patient.getGender(),patient.getMedicalConditions());
+            existingPatient = new Patient(patient.getPatId(), patient.getName(), patient.getEmail(), patient.getContactNo(), patient.getAge(), patient.getGender(), patient.getMedicalConditions());
             patientRepo.save(existingPatient);
-            for(Prescription p: patient.getPrescriptionList())
+            if(patient.getPrescriptionList()!=null)
             {
-                p.setPatient(existingPatient);
+                for (Prescription p : patient.getPrescriptionList()) {
+                    p.setPatient(existingPatient);
+                }
+                presService.updatePrescription(patient.getPrescriptionList());
             }
-            presService.updatePrescription(patient.getPrescriptionList());
             return existingPatient;
         } else {
             log.error("Patient could not be updated, because requested patient could not be found");
             return null;
         }
     }
+
     @Transactional
     public Boolean deletePatient(Integer id) {
         log.info("Incoming patient id (to be deleted): " + id);
         try {
-            Patient existingPatient  = getPatientById(id);
-            if(existingPatient!=null)
-            {
-                presService.deleteAllByPatient(existingPatient);
+            Patient existingPatient = getPatientById(id);
+            if (existingPatient != null) {
+                if(existingPatient.getPrescriptionList()!=null)
+                {
+                    presService.deleteAllByPatient(existingPatient);
+                }
                 patientRepo.deleteById(id);
-                return  true;
+                return true;
             }
             return false;
         } catch (Exception e) {

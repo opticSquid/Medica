@@ -8,10 +8,12 @@ import com.sb.projects.medica.microservices.authenticationservice.pojo.finalclas
 import com.sb.projects.medica.microservices.authenticationservice.pojo.finalclass.Patient;
 import com.sb.projects.medica.microservices.authenticationservice.repository.UserRepo;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.net.URI;
+import java.util.Objects;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -22,6 +24,11 @@ public class UserService {
     public UserService(UserRepo userRepo, RestTemplate restTemplate) {
         this.userRepo = userRepo;
         this.restTemplate = restTemplate;
+    }
+
+    private User findUserById(Integer id) {
+        Optional<User> userOptional = userRepo.findById(id);
+        return userOptional.orElse(null);
     }
 
     private Integer addNewUser(BasicDetailsPojo basicDetailsPojo) {
@@ -49,11 +56,34 @@ public class UserService {
         BasicDetailsPojo basicDoctorDetails = new BasicDetailsPojo(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getPassword(), "DOCTOR");
         Integer userId = addNewUser(basicDoctorDetails);
         // This doctor should be sent to doctor microservice
-        Doctor doctor = new Doctor(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getRegNo(), doctorDetails.getDegree(), doctorDetails.getSpecialization(), doctorDetails.getExperience(), doctorDetails.getSlots());
+        Doctor doctor;
+        if (doctorDetails.getSlots() != null) {
+            // if slot details is provided
+            doctor = new Doctor(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getRegNo(), doctorDetails.getDegree(), doctorDetails.getSpecialization(), doctorDetails.getExperience(), doctorDetails.getSlots());
+        } else {
+            // if slot details is not provided
+            doctor = new Doctor(doctorDetails.getName(), doctorDetails.getEmail(), doctorDetails.getContactNo(), doctorDetails.getRegNo(), doctorDetails.getDegree(), doctorDetails.getSpecialization(), doctorDetails.getExperience());
+        }
         doctor.setDocId(userId);
-        log.debug("Doctor: {}",doctor);
-        restTemplate.postForLocation("http://DOCTOR/doctor/new",doctor,Doctor.class);
+        log.debug("Doctor: {}", doctor);
+        restTemplate.postForLocation("http://DOCTOR/doctor/new", doctor, Doctor.class);
         return userId;
     }
 
+    public Boolean deleteUser(Integer id) {
+        User user = findUserById(id);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<Object> entity = new HttpEntity<>(headers);
+        String uri;
+        if (Objects.equals(user.getRole(), "PATIENT")) {
+            uri = "http://PATIENT/patient/delete/" + id;
+        } else if (Objects.equals(user.getRole(), "DOCTOR")) {
+            uri = "http://DOCTOR/doctor/delete/" + id;
+        } else {
+            return false;
+        }
+        ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.DELETE, entity, String.class);
+        return response.getStatusCode() == HttpStatus.OK;
+    }
 }

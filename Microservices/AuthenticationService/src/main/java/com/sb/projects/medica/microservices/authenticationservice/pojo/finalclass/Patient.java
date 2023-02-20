@@ -9,6 +9,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Getter
 @ToString
@@ -25,9 +26,12 @@ public class Patient {
     private Integer age;
     @GenderType
     private String gender;
-    private String medicalConditions;
+    private List<String> medicalConditions;
+    // Voluntarily not keeping prescriptions in the constructor because new patients can not have a prior prescription
+    // If needed will add later
+    private List<Prescription> prescriptions;
 
-    public Patient(String name, String email, String contactNo, Integer age, String gender, String medicalConditions) {
+    public Patient(String name, String email, String contactNo, Integer age, String gender, List<String> medicalConditions) {
         this.name = name;
         this.email = email;
         this.contactNo = contactNo;
