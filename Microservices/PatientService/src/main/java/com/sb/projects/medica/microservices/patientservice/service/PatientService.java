@@ -3,6 +3,7 @@ package com.sb.projects.medica.microservices.patientservice.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.sb.projects.medica.microservices.patientservice.pojo.PrescriptionPOJO;
 import org.springframework.stereotype.Service;
 
 import com.sb.projects.medica.microservices.patientservice.entity.Patient;
@@ -11,13 +12,17 @@ import com.sb.projects.medica.microservices.patientservice.repo.PatientRepo;
 
 import lombok.extern.slf4j.Slf4j;
 
+import javax.transaction.Transactional;
+
 @Slf4j
 @Service
 public class PatientService {
     private final PatientRepo patientRepo;
+    private final PrescriptionService presService;
 
-    public PatientService(PatientRepo patientRepo) {
+    public PatientService(PatientRepo patientRepo, PrescriptionService presService) {
         this.patientRepo = patientRepo;
+        this.presService = presService;
     }
 
     public Iterable<Patient> fetchAllPatients() {
@@ -38,12 +43,18 @@ public class PatientService {
         Optional<Patient> patientOptional = patientRepo.findByEmail(email);
         return patientOptional.orElse(null);
     }
-    //TODO:: Tomorrow add Prescription
+    @Transactional
     public Patient addNewPatient(PatientPojo patient) {
         log.info("Incoming patient (to be added): " + patient);
         try {
             Patient tobeSaved = new Patient(patient);
             patientRepo.save(tobeSaved);
+            log.debug("Primary save step completed");
+            for(PrescriptionPOJO p: patient.getPrescriptionPOJOS())
+            {
+                p.setPatient(tobeSaved);
+            }
+            presService.addNewPrescription(patient.getPrescriptionPOJOS());
             return tobeSaved;
         } catch (Exception e) {
             log.error("new Patient could not be added.. reason =>\n" + e);

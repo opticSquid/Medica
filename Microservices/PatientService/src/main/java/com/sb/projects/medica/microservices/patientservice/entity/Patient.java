@@ -1,8 +1,6 @@
 package com.sb.projects.medica.microservices.patientservice.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
@@ -34,6 +32,8 @@ public class Patient {
     private String contactNo;
     private Integer age;
     private String gender;
+    @ElementCollection
+    @CollectionTable(name="medical_conditions", joinColumns = @JoinColumn(name="patId"))
     private List<String> medicalConditions = new ArrayList<>();
     @OneToMany(mappedBy = "patient")
     private List<Prescription> prescriptionList = new ArrayList<>();
