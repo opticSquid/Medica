@@ -69,11 +69,12 @@ public class DoctorService {
         Doctor existingDoctor = getDoctorByID(doctor.getDocId());
         if (existingDoctor != null) {
             existingDoctor = new Doctor(doctor.getDocId(), doctor.getName(), doctor.getEmail(), doctor.getContactNo(), doctor.getRegNo(), doctor.getDegree(), doctor.getSpecialization(), doctor.getExperience());
+            existingDoctor = doctorRepo.save(existingDoctor);
             for (Slot s : doctor.getSlots()) {
                 s.setDoctor(existingDoctor);
             }
             slotService.updateTiming(doctor.getSlots());
-            return doctorRepo.save(existingDoctor);
+            return existingDoctor;
         } else {
             log.error("Doctor could not be updated, because requested doctor id could not be found");
             return null;

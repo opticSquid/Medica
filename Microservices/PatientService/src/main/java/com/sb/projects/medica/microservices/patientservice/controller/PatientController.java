@@ -86,9 +86,9 @@ public class PatientController {
         }
     }
 
-    @PutMapping(value = "/update/{id}")
-    public ResponseEntity<String> updatePatientDetails(@PathVariable("id") Integer id, @RequestBody PatientPojo patient) {
-        Patient updatedPatient = patientService.updatePatient(id, patient);
+    @PutMapping(value = "/update")
+    public ResponseEntity<String> updatePatientDetails(@RequestBody Patient patient) {
+        Patient updatedPatient = patientService.updatePatient(patient);
         if (updatedPatient != null) {
             URI location = ServletUriComponentsBuilder.fromCurrentContextPath().path("/id/{id}").buildAndExpand(updatedPatient.getPatId()).toUri();
             return ResponseEntity.status(204).location(location).build();

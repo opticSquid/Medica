@@ -30,6 +30,6 @@ public class PatientPojo {
     private Integer age;
     private String gender;
     private List<String> medicalConditions;
-    private List<PrescriptionPOJO> prescriptionPOJOS;
+    private List<PrescriptionPOJO> prescriptions;
 
 }

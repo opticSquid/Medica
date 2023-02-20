@@ -18,27 +18,29 @@ public class SlotService {
         this.slotrepo = slotrepo;
     }
 
-    public void addTiming(List<SlotPOJO> slots){
-        for(SlotPOJO slot: slots)
-        {
+    public void addTiming(List<SlotPOJO> slots) {
+        for (SlotPOJO slot : slots) {
             Slot newSlot = new Slot(slot);
             slotrepo.save(newSlot);
         }
     }
+
     public void updateTiming(List<Slot> slots) {
-        log.debug("Slots to be updated: {}",slots);
-        for(Slot s: slots)
-        {
-            slotrepo.save(s);
+        log.debug("Slots to be updated: {}", slots);
+        for (Slot s : slots) {
+            try {
+                slotrepo.save(s);
+            } catch (Exception e) {
+                log.debug("Could not update slots for Slot: {} of Doctor: {}\n Reason: {}", s, s.getDoctor(), e);
+            }
         }
     }
-    public void deleteAllSlotsOfDoctor(Doctor doctor)
-    {
-        try{
+
+    public void deleteAllSlotsOfDoctor(Doctor doctor) {
+        try {
             slotrepo.deleteByDoctor(doctor);
-        } catch (Exception e)
-        {
-            log.debug("Could not delete slots for Doctor: {}\n Reason: {}",doctor,e);
+        } catch (Exception e) {
+            log.debug("Could not delete slots for Doctor: {}\n Reason: {}", doctor, e);
         }
     }
 }

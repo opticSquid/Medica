@@ -3,6 +3,7 @@ package com.sb.projects.medica.microservices.patientservice.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.sb.projects.medica.microservices.patientservice.entity.Prescription;
 import com.sb.projects.medica.microservices.patientservice.pojo.PrescriptionPOJO;
 import org.springframework.stereotype.Service;
 
@@ -44,18 +45,18 @@ public class PatientService {
         return patientOptional.orElse(null);
     }
     @Transactional
-    public Patient addNewPatient(PatientPojo patient) {
-        log.info("Incoming patient (to be added): " + patient);
+    public Patient addNewPatient(PatientPojo incomingPatient) {
+        log.info("Incoming patient (to be added): " + incomingPatient);
         try {
-            Patient tobeSaved = new Patient(patient);
-            patientRepo.save(tobeSaved);
+            Patient patient = new Patient(incomingPatient);
+            patient = patientRepo.save(patient);
             log.debug("Primary save step completed");
-            for(PrescriptionPOJO p: patient.getPrescriptionPOJOS())
+            for(PrescriptionPOJO p: incomingPatient.getPrescriptions())
             {
-                p.setPatient(tobeSaved);
+                p.setPatient(patient);
             }
-            presService.addNewPrescription(patient.getPrescriptionPOJOS());
-            return tobeSaved;
+            presService.addNewPrescription(incomingPatient.getPrescriptions());
+            return patient;
         } catch (Exception e) {
             log.error("new Patient could not be added.. reason =>\n" + e);
             return null;
@@ -65,25 +66,36 @@ public class PatientService {
     //TODO: Code can further be optimized by taking only id and only the field to update
     //TODO: update can be overloaded with one update just updating single field using id only
     //TODO: Another update updating the whole record
-    public Patient updatePatient(Integer id, PatientPojo patient) {
+    @Transactional
+    public Patient updatePatient(Patient patient) {
         log.info("Incoming patient (to be updated): " + patient);
-        Patient existingPatient = getPatientById(id);
+        Patient existingPatient = getPatientById(patient.getPatId());
         if (existingPatient != null) {
-            patient.setPatId(existingPatient.getPatId());
-            Patient tobeSaved = new Patient(patient);
-            patientRepo.save(tobeSaved);
-            return tobeSaved;
+            existingPatient = new Patient(patient.getPatId(),patient.getName(),patient.getEmail(),patient.getContactNo(),patient.getAge(),patient.getGender(),patient.getMedicalConditions());
+            patientRepo.save(existingPatient);
+            for(Prescription p: patient.getPrescriptionList())
+            {
+                p.setPatient(existingPatient);
+            }
+            presService.updatePrescription(patient.getPrescriptionList());
+            return existingPatient;
         } else {
             log.error("Patient could not be updated, because requested patient could not be found");
             return null;
         }
     }
-
-    public boolean deletePatient(Integer id) {
+    @Transactional
+    public Boolean deletePatient(Integer id) {
         log.info("Incoming patient id (to be deleted): " + id);
         try {
-            patientRepo.deleteById(id);
-            return true;
+            Patient existingPatient  = getPatientById(id);
+            if(existingPatient!=null)
+            {
+                presService.deleteAllByPatient(existingPatient);
+                patientRepo.deleteById(id);
+                return  true;
+            }
+            return false;
         } catch (Exception e) {
             log.error("Patient could not be deleted.. reason => " + e);
             return false;
