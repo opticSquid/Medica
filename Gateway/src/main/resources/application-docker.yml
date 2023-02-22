@@ -2,7 +2,7 @@ logging:
   level:
     web: debug
 server:
-  port: 8088
+  port: 8080
 eureka:
   client:
     service-url:
