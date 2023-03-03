@@ -12,6 +12,50 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+resilience4j:
+  circuitbreaker:
+    instances:
+      patientSignupBreaker:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+      doctorSignupBreaker:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+      deleteUserBreaker:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
 logging:
   level:
     web: error
