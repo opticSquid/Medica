@@ -24,7 +24,40 @@ management:
     health:
       show-details: always
 resilience4j:
+  retry:
+    retryAspectOrder: 2
+    instances:
+      patientSignupRetry:
+        maxAttempts: 3
+        waitDuration: 5s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+        retryExceptions:
+          - org.springframework.web.client.RestClientException
+        ignoreExceptions:
+          - io.github.resilience4j.circuitbreaker.CallNotPermittedException
+      doctorSignupRetry:
+        maxAttempts: 3
+        waitDuration: 5s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+        retryExceptions:
+          - org.springframework.web.client.RestClientException
+        ignoreExceptions:
+          - io.github.resilience4j.circuitbreaker.CallNotPermittedException
+      deleteUserRetry:
+        maxAttempts: 3
+        waitDuration: 5s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+        retryExceptions:
+          - org.springframework.web.client.RestClientException
+        ignoreExceptions:
+          - io.github.resilience4j.circuitbreaker.CallNotPermittedException
   circuitbreaker:
+#    this is so that in spring aop retry takes more priority than circuit breaker when circuit goes from close to open
+#    it retries the request certain number of times before going to open
+    circuitBreakerAspectOrder: 1
     instances:
       patientSignupBreaker:
         registerHealthIndicator: true

@@ -1,10 +1,10 @@
 package com.sb.projects.medica.microservices.authenticationservice.controller;
 
-import com.sb.projects.medica.microservices.authenticationservice.entity.User;
 import com.sb.projects.medica.microservices.authenticationservice.pojo.DoctorDetailsPojo;
 import com.sb.projects.medica.microservices.authenticationservice.pojo.PatientDetailsPojo;
 import com.sb.projects.medica.microservices.authenticationservice.service.UserService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +28,7 @@ public class UserController {
 
     @PostMapping("/signup/patient")
     @CircuitBreaker(name = "patientSignupBreaker", fallbackMethod = "patientSignupFallback")
+    @Retry(name = "patientSignupRetry")
     public ResponseEntity<String> addNewPatient(@RequestBody @Valid PatientDetailsPojo patientDetails) throws URISyntaxException {
         Integer userId = userService.addNewPatient(patientDetails);
         if (userId == null) {
@@ -38,14 +39,15 @@ public class UserController {
         }
     }
 
-    // Fallback method for patient signup method
+    // CircuitBreaker Fallback method for patient signup method
     public ResponseEntity<String> patientSignupFallback(PatientDetailsPojo patientDetails, Exception ex) {
-        log.info("Fallback for patient signup is executed because patient service is down: {}", ex.getMessage());
+        log.info("Circuit Breaker Fallback for patient signup is executed because patient service is down: {}", ex.getMessage());
         return ResponseEntity.internalServerError().body("Could not sign up patient. Please try again later");
     }
 
     @PostMapping("/signup/doctor")
     @CircuitBreaker(name = "doctorSignupBreaker", fallbackMethod = "doctorSignupFallback")
+    @Retry(name = "doctorSignupRetry")
     public ResponseEntity<String> addNewDoctor(@RequestBody @Valid DoctorDetailsPojo doctorDetails) throws URISyntaxException {
         Integer userId = userService.addNewDoctor(doctorDetails);
         if (userId == null) {
@@ -55,6 +57,7 @@ public class UserController {
             return ResponseEntity.created(location).body("new doctor user created");
         }
     }
+
     // Fallback method for doctor signup method
     public ResponseEntity<String> doctorSignupFallback(DoctorDetailsPojo doctorDetails, Exception ex) {
         log.info("Fallback for doctor signup is executed because doctor service is down: {}", ex.getMessage());
@@ -63,6 +66,7 @@ public class UserController {
 
     @DeleteMapping("/delete/{id}")
     @CircuitBreaker(name = "deleteUserBreaker", fallbackMethod = "deleteUserFallback")
+    @Retry(name = "deleteUserRetry")
     public ResponseEntity<String> deleteUser(@PathVariable("id") Integer id) throws URISyntaxException {
         if (Boolean.TRUE.equals(userService.deleteUser(id))) {
             return ResponseEntity.status(HttpStatus.OK).body("user deleted");
