@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Getter
 @Setter
@@ -16,7 +17,7 @@ public class PatientDetailsPojo extends Patient {
     @Size(min = 8, message = "Password must be 8 characters long")
     private String password;
 
-    public PatientDetailsPojo(String name, String email, String contactNo, Integer age, String gender, String medicalConditions,String password){
+    public PatientDetailsPojo(String name, String email, String contactNo, Integer age, String gender, List<String> medicalConditions, String password){
         super(name, email, contactNo, age, gender, medicalConditions);
         this.password = password;
     }

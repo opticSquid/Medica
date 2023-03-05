@@ -1,52 +1,53 @@
 #! /bin/bash
+echo "...Building Medica..."
 echo "are packages up to date? (y/N)"
-read up2Date
-if [ $up2Date == "N" ]; then
+read -r up2Date
+if [ "$up2Date" == "N" ]; then
     echo "Creating JAR of Eureka Serrver"
-    cd ./EurekaServer
+    cd ./EurekaServer || return
     mvn clean package -DskipTests
     cd ../
     echo "Creating JAR of Application Gateway"
-    cd ./Gateway
+    cd ./Gateway || return
     mvn clean package -DskipTests
     cd ../
     echo "Starting to create JAR of own services"
-    cd ./Microservices
+    cd ./Microservices || return
     echo "Creating JAR of Patient Service"
-    cd ./PatientService
+    cd ./PatientService || return
     mvn clean package -DskipTests
     cd ../
     echo "Creating JAR of Doctor Service"
-    cd ./DoctorService
+    cd ./DoctorService || return
     mvn clean package -DskipTests
     cd ../
     echo "Creating JAR of Authentication Service"
-    cd ./AuthenticationService
+    cd ./AuthenticationService || return
     mvn clean package -DskipTests
     cd ../
-    # echo "Creating JAR of Appointment Service"
-    # cd ./AppointmentService
-    # mvn clean package -DskipTests
-    # cd ../../
+#     echo "Creating JAR of Appointment Service"
+#     cd ./AppointmentService || return
+#     mvn clean package -DskipTests
+#     cd ../../
     cd ../
     echo "Building executables completed"
 else
     echo "skipping building packages"
 fi
 echo "is Docker desktop already running? (y/N)"
-read isDockerRunning
-if [ $isDockerRunning == "N" ]; then
+read -r isDockerRunning
+if [ "$isDockerRunning" == "N" ]; then
     echo "Now attempting to start docker desktop"
     systemctl --user start docker-desktop
-    echo "waiting for docker desktop services to start properly -  waiting 5 mins"
-    sleep 300
+    echo "waiting for docker desktop services to start properly -  waiting 3 mins"
+    sleep 180
     echo "Docker Desktop Successfully started"
 else
     echo "skipping starting of docker desktop"
 fi
 echo "Is mysqldb, service discovery, app gateway already running? (y/N)"
-read isEssnRunning
-if [ $isEssnRunning == "N" ]; then
+read -r isEssnRunning
+if [ "$isEssnRunning" == "N" ]; then
     echo "Attempting to start essential container services"
     docker compose up -d mysqldb service-discovery app-gateway
     echo "waiting for all the services to come online - waiting 2 mins"

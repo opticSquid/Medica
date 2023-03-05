@@ -49,7 +49,7 @@ services:
       - internal
     restart: on-failure
     ports:
-      - "8080:8088"
+      - "8080:8080"
 
   service-discovery:
     container_name: service-discovery
@@ -68,8 +68,6 @@ services:
       MYSQL_USER: soumalya
       MYSQL_PASSWORD: QsCAzX@#$%24680
     ports:
-      # for dev only map it to host machine
-      # for prod remove the whole port config from here so that it is not accessible from else where
       - "5000:3306"
     networks:
       - internal

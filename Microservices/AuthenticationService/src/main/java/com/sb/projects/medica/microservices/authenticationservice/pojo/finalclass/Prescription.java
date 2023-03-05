@@ -1,7 +1,9 @@
-package com.sb.projects.medica.microservices.patientservice.pojo;
+package com.sb.projects.medica.microservices.authenticationservice.pojo.finalclass;
 
-import com.sb.projects.medica.microservices.patientservice.entity.Patient;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -11,10 +13,8 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PrescriptionPOJO {
-    Patient patient;
+public class Prescription {
     LocalDateTime time;
-    Integer docId;
     List<String> medicines = new ArrayList<>();
     List<String> tests = new ArrayList<>();
     String comments;

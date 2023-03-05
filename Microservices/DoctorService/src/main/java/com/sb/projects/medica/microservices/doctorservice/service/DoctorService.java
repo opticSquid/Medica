@@ -41,6 +41,7 @@ public class DoctorService {
         Optional<List<Doctor>> doctorOptional = doctorRepo.findBySpecialization(specialization);
         return doctorOptional.orElse(null);
     }
+
     @Transactional
     public Doctor addNewDoctor(DoctorPOJO incomingDoctor) {
         log.info("Incoming doctor (to be added): " + incomingDoctor);
@@ -48,11 +49,13 @@ public class DoctorService {
             Doctor doctor = new Doctor(incomingDoctor);
             doctor = doctorRepo.save(doctor);
             log.debug("primary save step succeeded");
-            for (SlotPOJO s : incomingDoctor.getSlots()
-            ) {
-                s.setDoctor(doctor);
+            if (incomingDoctor.getSlots() != null) {
+                for (SlotPOJO s : incomingDoctor.getSlots()
+                ) {
+                    s.setDoctor(doctor);
+                }
+                slotService.addTiming(incomingDoctor.getSlots());
             }
-            slotService.addTiming(incomingDoctor.getSlots());
             return doctor;
         } catch (Exception e) {
             log.error("new doctor could not be added.. reason =>\n" + e);
@@ -70,10 +73,12 @@ public class DoctorService {
         if (existingDoctor != null) {
             existingDoctor = new Doctor(doctor.getDocId(), doctor.getName(), doctor.getEmail(), doctor.getContactNo(), doctor.getRegNo(), doctor.getDegree(), doctor.getSpecialization(), doctor.getExperience());
             existingDoctor = doctorRepo.save(existingDoctor);
-            for (Slot s : doctor.getSlots()) {
-                s.setDoctor(existingDoctor);
+            if (doctor.getSlots() != null) {
+                for (Slot s : doctor.getSlots()) {
+                    s.setDoctor(existingDoctor);
+                }
+                slotService.updateTiming(doctor.getSlots());
             }
-            slotService.updateTiming(doctor.getSlots());
             return existingDoctor;
         } else {
             log.error("Doctor could not be updated, because requested doctor id could not be found");
@@ -86,9 +91,11 @@ public class DoctorService {
         log.info("Incoming doctor id (to be deleted): " + id);
         try {
             Doctor existingDoctor = getDoctorByID(id);
-            if(existingDoctor!=null)
-            {
-                slotService.deleteAllSlotsOfDoctor(existingDoctor);
+            if (existingDoctor != null) {
+                if(existingDoctor.getSlots()!=null)
+                {
+                    slotService.deleteAllSlotsOfDoctor(existingDoctor);
+                }
                 doctorRepo.deleteById(id);
                 return true;
             }
