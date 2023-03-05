@@ -4,6 +4,7 @@ import com.sb.projects.medica.microservices.authenticationservice.pojo.DoctorDet
 import com.sb.projects.medica.microservices.authenticationservice.pojo.PatientDetailsPojo;
 import com.sb.projects.medica.microservices.authenticationservice.service.UserService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,7 @@ public class UserController {
     @PostMapping("/signup/patient")
     @CircuitBreaker(name = "patientSignupBreaker", fallbackMethod = "patientSignupFallback")
     @Retry(name = "patientSignupRetry")
+    @RateLimiter(name="patientServiceRateLimiter",fallbackMethod = "patientServiceRLExceed")
     public ResponseEntity<String> addNewPatient(@RequestBody @Valid PatientDetailsPojo patientDetails) throws URISyntaxException {
         Integer userId = userService.addNewPatient(patientDetails);
         if (userId == null) {
@@ -44,10 +46,16 @@ public class UserController {
         log.info("Circuit Breaker Fallback for patient signup is executed because patient service is down: {}", ex.getMessage());
         return ResponseEntity.internalServerError().body("Could not sign up patient. Please try again later");
     }
+    // Fall back for rate limit exceeded..
+    public ResponseEntity<String> patientServiceRLExceed(PatientDetailsPojo patientDetailsPojo, Exception ex){
+        log.info("Too many requests rate limit exceeded. Rejecting request: {}",ex.getMessage());
+        return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body("Rate Limit exceeded");
+    }
 
     @PostMapping("/signup/doctor")
     @CircuitBreaker(name = "doctorSignupBreaker", fallbackMethod = "doctorSignupFallback")
     @Retry(name = "doctorSignupRetry")
+    @RateLimiter(name="doctorServiceRateLimiter",fallbackMethod = "doctorServiceRLExceed")
     public ResponseEntity<String> addNewDoctor(@RequestBody @Valid DoctorDetailsPojo doctorDetails) throws URISyntaxException {
         Integer userId = userService.addNewDoctor(doctorDetails);
         if (userId == null) {
@@ -60,13 +68,19 @@ public class UserController {
 
     // Fallback method for doctor signup method
     public ResponseEntity<String> doctorSignupFallback(DoctorDetailsPojo doctorDetails, Exception ex) {
-        log.info("Fallback for doctor signup is executed because doctor service is down: {}", ex.getMessage());
+        log.info("Circuit Breaker Fallback for doctor signup is executed because doctor service is down: {}", ex.getMessage());
         return ResponseEntity.internalServerError().body("Could not sign up doctor. Please try again later");
+    }
+    // Fall back for rate limit exceeded..
+    public ResponseEntity<String> doctorServiceRLExceed(DoctorDetailsPojo doctorDetails, Exception ex){
+        log.info("Too many requests rate limit exceeded. Rejecting request: {}",ex.getMessage());
+        return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body("Rate Limit exceeded");
     }
 
     @DeleteMapping("/delete/{id}")
     @CircuitBreaker(name = "deleteUserBreaker", fallbackMethod = "deleteUserFallback")
     @Retry(name = "deleteUserRetry")
+    @RateLimiter(name="deleteUserRateLimiter",fallbackMethod = "deleteUserRLExceed")
     public ResponseEntity<String> deleteUser(@PathVariable("id") Integer id) throws URISyntaxException {
         if (Boolean.TRUE.equals(userService.deleteUser(id))) {
             return ResponseEntity.status(HttpStatus.OK).body("user deleted");
@@ -82,9 +96,13 @@ public class UserController {
             log.info("Fallback for delete user is executed because patient service is down: {}", ex.getMessage());
             return ResponseEntity.internalServerError().body("Could not delete patient. Please try again later");
         } else {
-            log.info("Fallback for delete user is executed because doctor service is down: {}", ex.getMessage());
+            log.info("Circuit Breaker Fallback for delete user is executed because doctor service is down: {}", ex.getMessage());
             return ResponseEntity.internalServerError().body("Could not delete doctor. Please try again later");
         }
-
+    }
+    // Fall back for rate limit exceeded..
+    public ResponseEntity<String> deleteUserRLExceed(Integer id, Exception ex){
+        log.info("Too many requests rate limit exceeded. Rejecting request: {}",ex.getMessage());
+        return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body("Rate Limit exceeded");
     }
 }

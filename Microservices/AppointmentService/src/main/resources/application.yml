@@ -12,6 +12,8 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
 logging:
   level:
     web: error

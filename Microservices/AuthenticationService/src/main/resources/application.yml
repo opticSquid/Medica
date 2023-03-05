@@ -12,6 +12,8 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
 management:
   health:
     circuitbreakers:
@@ -25,7 +27,7 @@ management:
       show-details: always
 resilience4j:
   retry:
-    retryAspectOrder: 2
+    retryAspectOrder: 3
     instances:
       patientSignupRetry:
         maxAttempts: 3
@@ -57,7 +59,7 @@ resilience4j:
   circuitbreaker:
 #    this is so that in spring aop retry takes more priority than circuit breaker when circuit goes from close to open
 #    it retries the request certain number of times before going to open
-    circuitBreakerAspectOrder: 1
+    circuitBreakerAspectOrder: 2
     instances:
       patientSignupBreaker:
         registerHealthIndicator: true
@@ -89,6 +91,21 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 3
         slidingWindowSize: 10
         slidingWindowType: COUNT_BASED
+  ratelimiter:
+    rateLimiterAspectOrder: 1
+    instances:
+      patientServiceRateLimiter:
+        limitRefreshPeriod: 10s
+        limitForPeriod: 8
+        timeoutDuration: 5s
+      doctorServiceRateLimiter:
+        limitRefreshPeriod: 10s
+        limitForPeriod: 8
+        timeoutDuration: 8s
+      deleteUserRateLimiter:
+        limitRefreshPeriod: 10s
+        limitForPeriod: 8
+        timeoutDuration: 5s
 logging:
   level:
     web: error
