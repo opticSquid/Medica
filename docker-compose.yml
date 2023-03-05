@@ -3,6 +3,7 @@ services:
   auth-service:
     container_name: auth-service
     build: ./Microservices/AuthenticationService
+    image: opticsquid/auth-service:latest
     depends_on:
       - mysqldb
       - service-discovery
@@ -23,6 +24,7 @@ services:
   doctor-service:
     container_name: doctor-service
     build: ./Microservices/DoctorService
+    image: opticsquid/doctor-service:latest
     depends_on:
       - mysqldb
       - service-discovery
@@ -33,6 +35,7 @@ services:
   patient-service:
     container_name: patient-service
     build: ./Microservices/PatientService
+    image: opticsquid/patient-service:latest
     depends_on:
       - mysqldb
       - service-discovery
@@ -43,6 +46,7 @@ services:
   app-gateway:
     container_name: app-gateway
     build: ./Gateway
+    image: opticsquid/app-gateway:latest
     depends_on:
       - service-discovery
     networks:
@@ -54,6 +58,7 @@ services:
   service-discovery:
     container_name: service-discovery
     build: ./EurekaServer
+    image: opticsquid/service-discovery
     networks:
       - internal
     restart: on-failure
@@ -67,8 +72,8 @@ services:
       MYSQL_ROOT_PASSWORD: PkNLm@#$2357
       MYSQL_USER: soumalya
       MYSQL_PASSWORD: QsCAzX@#$%24680
-    ports:
-      - "5000:3306"
+#    ports:
+#      - "5000:3306"
     networks:
       - internal
     volumes:
