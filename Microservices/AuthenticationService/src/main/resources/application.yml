@@ -8,6 +8,22 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-15970252.okta.com/oauth2/default
+      client:
+        registration:
+          auth-service:
+            provider: okta
+            authorization-grant-type: client_credentials
+            scope: internal
+            client-id: 0oa8lyxg5f42w5w9G5d7
+            client-secret: smpaVvkJ-1RTksVGlPOmfwsxCbDuQqYYi8KJMQ3m
+        provider:
+          okta:
+            issuer-uri: https://dev-15970252.okta.com/oauth2/default
 eureka:
   client:
     fetch-registry: true
@@ -109,3 +125,10 @@ resilience4j:
 logging:
   level:
     web: error
+okta:
+  oauth2:
+    issuer: https://dev-15970252.okta.com/oauth2/default
+    audience: api://default
+#    client-id: 0oa8lyxg5f42w5w9G5d7
+#    client-secret: smpaVvkJ-1RTksVGlPOmfwsxCbDuQqYYi8KJMQ3m
+#    scopes: openid, profile, email, offline_access
