@@ -72,8 +72,8 @@ services:
       MYSQL_ROOT_PASSWORD: PkNLm@#$2357
       MYSQL_USER: soumalya
       MYSQL_PASSWORD: QsCAzX@#$%24680
-#    ports:
-#      - "5000:3306"
+    ports:
+      - "5000:3306"
     networks:
       - internal
     volumes:

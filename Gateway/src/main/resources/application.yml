@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: docker
+    active: dev
   application:
     name: GATEWAY
   cloud:
@@ -25,9 +25,18 @@ spring:
 logging:
   level:
     web: error
+    org.springframework.security.we.csrf: debug
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
+# okta configuration for API gateway
+okta:
+  oauth2:
+    issuer: https://dev-15970252.okta.com/oauth2/default
+    audience: api://default
+    client-id: 0oa8lyxg5f42w5w9G5d7
+    client-secret: smpaVvkJ-1RTksVGlPOmfwsxCbDuQqYYi8KJMQ3m
+    scopes: openid, profile, email, offline_access
 
 
